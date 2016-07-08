@@ -36,6 +36,7 @@ public class Stock {
     public String getSymbol(){
         return symbol;
     }
+    
     public String toString(){
         return ("Symbol: " + symbol + "\t Current Price: " + currentPrice);
     }

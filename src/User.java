@@ -17,5 +17,19 @@ public class User
         myNetworth=myCash;
         myHoldings=null;
     }
-
+    
+    public double getMyNetworth()
+    {
+        return myNetworth;
+    }
+    
+    public double getMyCash()
+    {
+        return myCash;
+    }
+    
+    public ArrayList getMyHoldings()
+    {
+        return myHoldings;
+    }
 }
