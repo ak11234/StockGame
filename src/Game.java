@@ -4,8 +4,8 @@
 public class Game {
 
     public static void main(String args){
-        Update update = new Update(stocks);
-        new Thread(update).start();
+        //Update update = new Update(stocks);
+        //new Thread(update).start();
     }
     public static void init(){
 
