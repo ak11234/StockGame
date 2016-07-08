@@ -4,10 +4,13 @@
 import acm.program.Program;
 
 import javax.swing.*;
+import java.util.ArrayList;
 
 public class Window extends Program {
-    private JLabel myDisplay;
+    private ArrayList<JLabel> stockChart;
+
 
     public void init(){
+
     }
 }
