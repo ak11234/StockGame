@@ -10,7 +10,5 @@ public class Main {
         System.out.println("Hi josh -adam");
         System.out.println("Bye Bye World");
         new Window().start();
-        Game.init();
-        System.out.println(Game.TheStocks[0]);
     }
 }

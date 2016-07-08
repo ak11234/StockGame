@@ -1,17 +1,22 @@
+import acm.program.Program;
+
+import javax.swing.*;
+
 /**
  * Created by Adam on 7/8/2016. Stock game
  */
-public class Game {
+public class Game extends Program {
     public static Stock[] TheStocks;
+    private String rawStockChart;
+    private JLabel stockChart;
 
     public static void main(String[] args){
         Update update = new Update(TheStocks);
         new Thread(update).start();
-        init();
         System.out.println(Game.TheStocks[0]);
     }
 
-    public static void init()
+    public void init()
     {
         Stock [] myStocks = new Stock[30];
         // requirements (String newSymbol, double newStartPrice, double newSd, double newMeanReturn)
@@ -49,6 +54,12 @@ public class Game {
         TheStocks[28]= new Stock (28, "V", 76.13, 1, 1); //Visa
         TheStocks[29]= new Stock (29, "WMT", 73.56, 1, 1); //Walmart
 
-        
+        stockChart = new JLabel("");
+        rawStockChart="";
+        for(Stock k : Game.TheStocks){
+            rawStockChart+=k.toString();
+        }
+        stockChart.setText(rawStockChart);
+        add(stockChart);
     }
 }

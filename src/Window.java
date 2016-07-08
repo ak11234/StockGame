@@ -7,10 +7,20 @@ import javax.swing.*;
 import java.util.ArrayList;
 
 public class Window extends Program {
-    private ArrayList<JLabel> stockChart;
+    private String rawStockChart;
+    private JLabel stockChart;
 
 
     public void init(){
+        stockChart = new JLabel("");
+        rawStockChart="";
+        for(Stock k : Game.TheStocks){
+            rawStockChart+=k.toString();
+        }
+        stockChart.setText(rawStockChart);
+        add(stockChart);
+    }
+    public void run(){
 
     }
 }
