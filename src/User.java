@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 /**
  * The user class
  * 
@@ -8,16 +8,14 @@ public class User
 {
     private double myNetworth;
     private double myCash;
+    private ArrayList<Holding> myHoldings;
     
-    
-    
-    /**
-     * Constructor for objects of class User
-     */
     public User()
     {
         // initialise instance variables
-        
+        myCash= 1000000;
+        myNetworth=myCash;
+        myHoldings=null;
     }
 
 }

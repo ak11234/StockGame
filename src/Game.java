@@ -19,8 +19,8 @@ public class Game extends Program {
     public void init()
     {
         Stock [] myStocks = new Stock[30];
-        // requirements (String newSymbol, double newStartPrice, double newSd, double newMeanReturn)
-
+        
+        
         TheStocks = new Stock[30];
         // requirements (int newIndex, String newSymbol, double newStartPrice, double newSd, double newMeanReturn)
         TheStocks[0] = new Stock (0, "MMM", 176.71, 1, 1); //3M
@@ -34,24 +34,24 @@ public class Game extends Program {
         TheStocks[8] = new Stock (8, "DIS", 99.52, 1, 1);  //Disney
         TheStocks[9] = new Stock (9, "DD", 63.52, 1, 1);   //E I du Pont de Nemours and Co
         TheStocks[10]= new Stock (10, "XOM", 93.47, 1, 1); //Exxon Mobil
-        TheStocks[11]= new Stock (11, "GE", 32.19, 1, 1); //General Electric
+        TheStocks[11]= new Stock (11, "GE", 32.19, 1, 1);  //General Electric
         TheStocks[12]= new Stock (12, "GS", 150.66, 1, 1); //Goldman Sachs
         TheStocks[13]= new Stock (13, "HD", 133.76, 1, 1); //Home Depot
-        TheStocks[14]= new Stock (14, "IBM", 154.22, 1, 1); //IBM
-        TheStocks[15]= new Stock (15, "INTC", 33.93, 1, 1); //Intel
-        TheStocks[16]= new Stock (16, "JNJ", 122.55, 1, 1); //Johnson & Johnson
+        TheStocks[14]= new Stock (14, "IBM", 154.22, 1, 1);//IBM
+        TheStocks[15]= new Stock (15, "INTC", 33.93, 1, 1);//Intel
+        TheStocks[16]= new Stock (16, "JNJ", 122.55, 1, 1);//Johnson & Johnson
         TheStocks[17]= new Stock (17, "JPM", 61.85, 1, 1); //JPMorgan Chase
-        TheStocks[18]= new Stock (18, "MCD", 121.40, 1, 1); //McDonald's
+        TheStocks[18]= new Stock (18, "MCD", 121.40, 1, 1);//McDonald's
         TheStocks[19]= new Stock (19, "MRK", 59.23, 1, 1); //Merck
-        TheStocks[20]= new Stock (20, "MSFT", 52.23, 1, 1); //Microsoft
+        TheStocks[20]= new Stock (20, "MSFT", 52.23, 1, 1);//Microsoft
         TheStocks[21]= new Stock (21, "NKE", 56.61, 1, 1); //Nike
         TheStocks[22]= new Stock (22, "PFE", 35.99, 1, 1); //Phizer
-        TheStocks[23]= new Stock (23, "PG", 85.72, 1, 1); //Procter & Gamble
-        TheStocks[24]= new Stock (24, "TRV", 117.90, 1, 1); //Travelers Companies Inc
-        TheStocks[25]= new Stock (25, "UTX", 103.38, 1, 1); //United Technologies 
-        TheStocks[26]= new Stock (26, "UNH", 141.18, 1, 1); //UnitedHealth
-        TheStocks[27]= new Stock (27, "VZ", 55.90, 1, 1); //Verizon
-        TheStocks[28]= new Stock (28, "V", 76.13, 1, 1); //Visa
+        TheStocks[23]= new Stock (23, "PG", 85.72, 1, 1);  //Procter & Gamble
+        TheStocks[24]= new Stock (24, "TRV", 117.90, 1, 1);//Travelers Companies Inc
+        TheStocks[25]= new Stock (25, "UTX", 103.38, 1, 1);//United Technologies 
+        TheStocks[26]= new Stock (26, "UNH", 141.18, 1, 1);//UnitedHealth
+        TheStocks[27]= new Stock (27, "VZ", 55.90, 1, 1);  //Verizon
+        TheStocks[28]= new Stock (28, "V", 76.13, 1, 1);   //Visa
         TheStocks[29]= new Stock (29, "WMT", 73.56, 1, 1); //Walmart
 
         stockChart = new JLabel("");
