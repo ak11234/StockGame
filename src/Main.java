@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * Created by Adam Kalman on 7/7/2016. The TBD's stock market game
  */
@@ -8,5 +10,7 @@ public class Main {
         System.out.println("Hi josh -adam");
         System.out.println("Bye Bye World");
         new Window().start();
+        Game.init();
+        System.out.println(Game.TheStocks[0]);
     }
 }

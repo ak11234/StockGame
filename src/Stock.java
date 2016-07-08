@@ -8,12 +8,12 @@ public class Stock {
     private String symbol;
     private double sd, meanReturn;
     private double quantity=0.0;
-    private double startPrice, currentPrice, changePrice, changePercent;
+    private double startPrice, changePrice, changePercent, currentPrice;
     
     //constructor
     public Stock(int newIndex, String newSymbol, double newStartPrice, double newSd, double newMeanReturn){
         symbol=newSymbol;
-        startPrice=newStartPrice;
+        currentPrice=newStartPrice;
         index= newIndex ;
         sd= newSd;
         meanReturn= newMeanReturn;
@@ -35,5 +35,8 @@ public class Stock {
     
     public String getSymbol(){
         return symbol;
+    }
+    public String toString(){
+        return ("Symbol: " + symbol + "\t Current Price: " + currentPrice);
     }
 }
