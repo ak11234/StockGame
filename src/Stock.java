@@ -8,12 +8,14 @@ public class Stock {
     private String symbol;
     private double sd, meanReturn;
     private double startPrice, currentPrice, changePrice, changePercent;
-
+    
+    //constructor
     public Stock(String newSymbol, double newStartPrice, double newSd, double newMeanReturn){
         symbol=newSymbol;
         startPrice=newStartPrice;
     }
     
+    //changes the price of an individual stock object
     public void changePrice(){
         NormalDistribution distMarket= new NormalDistribution(0.1/230, 0.2/(Math.sqrt(230)));
         NormalDistribution distMe=new NormalDistribution(0.1*meanReturn/230, 0.2*sd/(Math.sqrt(230)));
