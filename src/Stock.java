@@ -9,13 +9,9 @@ public class Stock {
     private double sd, meanReturn;
     private double startPrice, currentPrice, changePrice, changePercent;
 
-    public Stock(String newSymbol, double newStartPrice){
+    public Stock(String newSymbol, double newStartPrice, double newSd, double newMeanReturn){
         symbol=newSymbol;
         startPrice=newStartPrice;
-    }
-    
-    public double getPrice(){
-        return currentPrice;
     }
     
     public void changePrice(){
@@ -25,6 +21,10 @@ public class Stock {
         double me = Double.parseDouble(distMarket.toString());
         double newPrice = currentPrice*(1+market)*(1+me);
         currentPrice=newPrice;
+    }
+    
+    public double getPrice(){
+        return currentPrice;
     }
     
     public String getSymbol(){
