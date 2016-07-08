@@ -11,12 +11,10 @@ public class Game {
 
     public static void init()
     {
-<<<<<<< Updated upstream
         Stock [] myStocks = new Stock[30];
         // requirements (String newSymbol, double newStartPrice, double newSd, double newMeanReturn)
-        Stock ThreeM = new Stock ("MMM", 176.71, 1, 1);
+      
 
-=======
        TheStocks = new Stock[30];
         // requirements (int newIndex, String newSymbol, double newStartPrice, double newSd, double newMeanReturn)
         TheStocks[0] = new Stock (0, "MMM", 176.71, 1, 1);  
@@ -29,6 +27,6 @@ public class Game {
         TheStocks[7] = new Stock (7, "KO", 45.33, 1, 1);
         TheStocks[8] = new Stock (8, "DIS", 99.52, 1, 1);
         TheStocks[9] = new Stock (9, "DD", 63.52, 1, 1);
->>>>>>> Stashed changes
+
     }
 }
