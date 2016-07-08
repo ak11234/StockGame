@@ -1,3 +1,5 @@
+import acm.graphics.GLabel;
+import acm.gui.TableLayout;
 import acm.program.Program;
 
 import javax.swing.*;
@@ -8,12 +10,12 @@ import javax.swing.*;
 public class Game extends Program {
     public static Stock[] TheStocks;
     private String rawStockChart;
-    private JLabel stockChart;
+    private JLabel[] stockChart;
 
     public static void main(String[] args){
-        Update update = new Update(TheStocks);
-        new Thread(update).start();
-        System.out.println(Game.TheStocks[0]);
+
+        Game myGame = new Game();
+        myGame.start();
     }
 
     public void init()
@@ -54,12 +56,22 @@ public class Game extends Program {
         TheStocks[28]= new Stock (28, "V", 76.13, 1, 1);   //Visa
         TheStocks[29]= new Stock (29, "WMT", 73.56, 1, 1); //Walmart
 
-        stockChart = new JLabel("");
-        rawStockChart="";
+        stockChart = new JLabel[30];
+/*        rawStockChart="<html>";
         for(Stock k : Game.TheStocks){
             rawStockChart+=k.toString();
+            rawStockChart+="<br><br>";
         }
+        rawStockChart+="</html>";
+        System.out.println(rawStockChart);
         stockChart.setText(rawStockChart);
-        add(stockChart);
+        add(stockChart);*/
+        setLayout(new TableLayout(30, 1));
+        for (Stock k : Game.TheStocks){
+            GLabel stock = new GLabel("Label", 50, 50);
+            add(stock);
+        }
+        Update update = new Update(TheStocks);
+        new Thread(update).start();
     }
 }
