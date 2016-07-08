@@ -1,6 +1,10 @@
 #BlueJ class context
-comment0.params=symbol\ startPrice
+comment0.params=newSymbol\ newStartPrice
 comment0.target=Stock(java.lang.String,\ double)
 comment1.params=
 comment1.target=double\ getPrice()
-numComments=2
+comment2.params=
+comment2.target=void\ changePrice()
+comment3.params=
+comment3.target=java.lang.String\ getSymbol()
+numComments=4
