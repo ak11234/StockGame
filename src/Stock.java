@@ -7,8 +7,10 @@ public class Stock {
     private double std, meanReturn;
     private double startPrice, currentPrice, changePrice, changePercent;
 
-    public Stock(String symbol, double startPrice){
+    public Stock(String newSymbol, double newStartPrice){
 
+        symbol=newSymbol;
+        startPrice=newStartPrice;
     }
 
 
