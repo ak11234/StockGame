@@ -19,16 +19,28 @@ public class Game {
 
        TheStocks = new Stock[30];
         // requirements (int newIndex, String newSymbol, double newStartPrice, double newSd, double newMeanReturn)
-        TheStocks[0] = new Stock (0, "MMM", 176.71, 1, 1);  
-        TheStocks[1] = new Stock (1, "AXP", 61.35, 1, 1); 
-        TheStocks[2] = new Stock (2, "AAPL", 96.64, 1, 1); 
-        TheStocks[3] = new Stock (3, "BA", 129.93, 1, 1); 
-        TheStocks[4] = new Stock (4, "CAT", 77.06, 1, 1); 
-        TheStocks[5] = new Stock (5, "CVX", 104.45, 1, 1);
-        TheStocks[6] = new Stock (6, "CSCO", 29.3, 1, 1);
-        TheStocks[7] = new Stock (7, "KO", 45.33, 1, 1);
-        TheStocks[8] = new Stock (8, "DIS", 99.52, 1, 1);
-        TheStocks[9] = new Stock (9, "DD", 63.52, 1, 1);
+        TheStocks[0] = new Stock (0, "MMM", 176.71, 1, 1); //3M
+        TheStocks[1] = new Stock (1, "AXP", 61.35, 1, 1);  //American Express
+        TheStocks[2] = new Stock (2, "AAPL", 96.64, 1, 1); //Apple
+        TheStocks[3] = new Stock (3, "BA", 129.93, 1, 1);  //Boeing
+        TheStocks[4] = new Stock (4, "CAT", 77.06, 1, 1);  //Caterpillar
+        TheStocks[5] = new Stock (5, "CVX", 104.45, 1, 1); //Chevron
+        TheStocks[6] = new Stock (6, "CSCO", 29.3, 1, 1);  //Cisco
+        TheStocks[7] = new Stock (7, "KO", 45.33, 1, 1);   //Coca-Cola
+        TheStocks[8] = new Stock (8, "DIS", 99.52, 1, 1);  //Disney
+        TheStocks[9] = new Stock (9, "DD", 63.52, 1, 1);   //E I du Pont de Nemours and Co
+        TheStocks[10]= new Stock (10, "XOM", 93.47, 1, 1); //Exxon Mobil
+        TheStocks[11]= new Stock (11, "GE", 32.19, 1, 1); //General Electric
+        TheStocks[12]= new Stock (12, "GS", 150.66, 1, 1); //Goldman Sachs
+        TheStocks[13]= new Stock (13, "HD", 133.76, 1, 1); //Home Depot
+        TheStocks[14]= new Stock (14, "IBM", 154.22, 1, 1); //IBM
+        TheStocks[15]= new Stock (15, "INTC", 33.93, 1, 1); //Intel
+        TheStocks[16]= new Stock (16, "JNJ", 122.55, 1, 1); //Johnson & Johnson
+        TheStocks[17]= new Stock (17, "JPM", 61.85, 1, 1); //JPMorgan Chase
+        TheStocks[18]= new Stock (18, "MCD", 121.40, 1, 1); //McDonald's
+        
+        
+        
 
     }
 }
