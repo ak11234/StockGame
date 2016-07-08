@@ -1,16 +1,16 @@
-import acm.graphics.GLabel;
+import acm.graphics.*;
 import acm.gui.TableLayout;
-import acm.program.Program;
+import acm.program.GraphicsProgram;
 
 import javax.swing.*;
+
 
 /**
  * Created by Adam on 7/8/2016. Stock game
  */
-public class Game extends Program {
+public class Game extends GraphicsProgram {
     public static Stock[] TheStocks;
     private String rawStockChart;
-    private JLabel[] stockChart;
 
     public static void main(String[] args){
 
@@ -56,7 +56,6 @@ public class Game extends Program {
         TheStocks[28]= new Stock (28, "V", 76.13, 1, 1);   //Visa
         TheStocks[29]= new Stock (29, "WMT", 73.56, 1, 1); //Walmart
 
-        stockChart = new JLabel[30];
 /*        rawStockChart="<html>";
         for(Stock k : Game.TheStocks){
             rawStockChart+=k.toString();
@@ -66,11 +65,17 @@ public class Game extends Program {
         System.out.println(rawStockChart);
         stockChart.setText(rawStockChart);
         add(stockChart);*/
-        setLayout(new TableLayout(30, 1));
+
+    }
+    public void run(){
         for (Stock k : Game.TheStocks){
-            GLabel stock = new GLabel("Label", 50, 50);
+            GLabel stock = new GLabel(k.toString(), 15, 35+(k.getIndex()*20));
             add(stock);
         }
+        add(new JTextField(), SOUTH);
+        add(new JButton("Buy") ,SOUTH);
+        add(new JButton("Sell"), SOUTH);
+
         Update update = new Update(TheStocks);
         new Thread(update).start();
     }
