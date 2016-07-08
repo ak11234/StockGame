@@ -7,12 +7,16 @@ public class Stock {
     private int index;
     private String symbol;
     private double sd, meanReturn;
+    private double quantity=0.0;
     private double startPrice, currentPrice, changePrice, changePercent;
     
     //constructor
-    public Stock(String newSymbol, double newStartPrice, double newSd, double newMeanReturn){
+    public Stock(int newIndex, String newSymbol, double newStartPrice, double newSd, double newMeanReturn){
         symbol=newSymbol;
         startPrice=newStartPrice;
+        index= newIndex ;
+        sd= newSd;
+        meanReturn= newMeanReturn;
     }
     
     //changes the price of an individual stock object
@@ -32,6 +36,4 @@ public class Stock {
     public String getSymbol(){
         return symbol;
     }
-    
-    
 }

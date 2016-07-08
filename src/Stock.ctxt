@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=newSymbol\ newStartPrice\ newSd\ newMeanReturn
-comment0.target=Stock(java.lang.String,\ double,\ double,\ double)
+comment0.params=newIndex\ newSymbol\ newStartPrice\ newSd\ newMeanReturn
+comment0.target=Stock(int,\ java.lang.String,\ double,\ double,\ double)
 comment1.params=
 comment1.target=void\ changePrice()
 comment2.params=
