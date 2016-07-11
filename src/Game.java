@@ -106,16 +106,15 @@ public class Game extends GraphicsProgram {
             boolean validSymbol = false;
             boolean validQuantity = false;
             int qualifiedQuantity=Integer.parseInt(quantityEntered.getText());
-            boolean buySell; //Buy is true, sell is false;
-            for (Stock stock : TheStocks){
+            for (Stock stock : TheStocks){ //Make sure they entered a valid stock symbol
                 if (stock.getSymbol().equals(symbolEntered.getText())){ //If its found, mark valid
                     validSymbol=true;
                 }
             }
-            if (qualifiedQuantity>0){
+            if (qualifiedQuantity>0){ //Quantity must be bigger than 0 (positive)
                 validQuantity=true;
                 if (key.equals("Sell")){
-                    qualifiedQuantity= -qualifiedQuantity;
+                    qualifiedQuantity= -qualifiedQuantity; //Reverse the number if the order is to sell
                 }
             }
             if (validSymbol&&validQuantity){
