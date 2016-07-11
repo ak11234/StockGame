@@ -57,6 +57,7 @@ public class User
     {
         return myHoldings;
     }
+    
     public String toString(){
         System.out.println(myHoldings.toString());
         return myHoldings.toString();
