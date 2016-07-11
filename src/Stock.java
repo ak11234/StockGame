@@ -56,6 +56,7 @@ public class Stock extends GLabel implements Runnable {
     //changes the price of an individual stock object
     public void run() {
         while(true){
+            pause(60000);
             
             NormalDistribution distMe= new NormalDistribution(0.1*meanReturn/230, 0.2*sd/(Math.sqrt(230)));
             double market = Double.parseDouble(myGame.getDistMarket().toString());
