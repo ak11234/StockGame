@@ -48,6 +48,14 @@ public class User
     
     public double getMyNetworth()
     {
+        myNetworth = myCash;
+        for(int k=0; k<myHoldings.size(); k++)
+        {
+            myNetworth = myNetworth+
+                (myHoldings.get(k).getMyStock().getPrice() * myHoldings.get(k).getQuantity());
+            
+        }//sets networth
+        
         return myNetworth;
     }
 
