@@ -3,6 +3,7 @@ import acm.gui.TableLayout;
 import acm.program.GraphicsProgram;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
 
 
 /**
@@ -11,6 +12,8 @@ import javax.swing.*;
 public class Game extends GraphicsProgram {
     public static Stock[] TheStocks;
     private String rawStockChart;
+    JTextField symbolEntered = new JTextField(9);
+    JTextField quantityEntered = new JTextField(9);
 
     public static void main(String[] args){
 
@@ -72,11 +75,25 @@ public class Game extends GraphicsProgram {
             GLabel stock = new GLabel(k.toString(), 15, 35+(k.getIndex()*20));
             add(stock);
         }
-        add(new JTextField(), SOUTH);
+
+        add(new JLabel("Stock Symbol: "), SOUTH);
+        add(symbolEntered, SOUTH);
+        add(new JLabel("Amount: "), SOUTH);
+        add(quantityEntered, SOUTH);
         add(new JButton("Buy") ,SOUTH);
         add(new JButton("Sell"), SOUTH);
+        addActionListeners();
 
         Update update = new Update(TheStocks);
         new Thread(update).start();
+        User user = new User();
+        System.out.println(user.getMyHoldings());
+    }
+    public void actionPerformed(ActionEvent e){
+        String key;
+        key = e.getActionCommand();
+        System.out.println(key);
+        System.out.println(symbolEntered.getText());
+        System.out.println(quantityEntered.getText());
     }
 }
