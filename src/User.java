@@ -15,13 +15,13 @@ public class User
         // initialise instance variables
         myCash= 1000000;
         myNetworth=myCash;
-        myHoldings=null;
+        myHoldings= new ArrayList<Holding>();
         myGame=g;
     }
 
     public void updateHoldings(String s, int q)
     {
-        for(int k=0; k<=myHoldings.size(); k++)
+        for(int k=0; k<myHoldings.size(); k++)
         {
             if(myHoldings.get(k).getMyStock().getSymbol().equals(s)) 
             //checks all of my holdings to see if the symbol given is the same as one of my holdings
@@ -56,6 +56,11 @@ public class User
     public ArrayList getMyHoldings()
     {
         return myHoldings;
+    }
+    public String toString(){
+        System.out.println(myHoldings.toString());
+        return myHoldings.toString();
+
     }
 
 }

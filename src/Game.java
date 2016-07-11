@@ -120,6 +120,7 @@ public class Game extends GraphicsProgram {
             }
             if (validSymbol&&validQuantity){
                 //Do the trade in question
+                user.updateHoldings(symbolEntered.getText(), qualifiedQuantity);
             } else {
                 System.out.println("Invalid Entry");
             }
@@ -127,6 +128,7 @@ public class Game extends GraphicsProgram {
             System.out.println(key);
             System.out.println(symbolEntered.getText());
             System.out.println(qualifiedQuantity);
+            System.out.println(user.getMyHoldings().toString());
 
         }
     }
