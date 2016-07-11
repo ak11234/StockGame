@@ -1,9 +1,10 @@
+import acm.graphics.GLabel;
 import org.apache.commons.math3.distribution.NormalDistribution;
 
 /**
- * Created by Josh on 7/8/2016. Stock object
+ * Created by Josh and Adam on 7/8/2016. Stock object
  */
-public class Stock {
+public class Stock extends GLabel implements Runnable {
     private int index;
     private String symbol;
     private double sd, meanReturn;
@@ -17,6 +18,7 @@ public class Stock {
         index= newIndex ;
         sd= newSd;
         meanReturn= newMeanReturn;
+
     }
     
     //changes the price of an individual stock object
@@ -43,5 +45,8 @@ public class Stock {
     
     public int getIndex(){
         return index;
+    }
+    public void run() {
+
     }
 }

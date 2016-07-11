@@ -2,6 +2,8 @@ import acm.graphics.GLabel;
 
 import java.util.ArrayList;
 
+import static acm.util.JTFTools.pause;
+
 /**
  * Created by Adam on 7/8/2016. To update
  */
@@ -19,12 +21,15 @@ public class Update implements Runnable {
             myGame.stockLabels.add(k, (new GLabel(Game.TheStocks[k].toString(), 15, 35+(Game.TheStocks[k].getIndex()*20))));
             myGame.add(myGame.stockLabels.get(k));
         }
-
+        int temp=5;
         while (true){
+            temp++;
             for (Stock k : Game.TheStocks){
                myGame.stockLabels.set(k.getIndex(), (new GLabel(k.toString(), 15, 35+(k.getIndex()*20))));
             }
-            //myGame.TheStocks[0]=new
+            Game.TheStocks[0]=new Stock(0, "MMMC" , temp, 1, 1);
+            pause(1000);
+            System.out.println("loop");
         }
     }
 }
