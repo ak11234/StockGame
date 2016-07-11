@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Arrays;
+
 /**
  * The user class
  * 
@@ -58,9 +60,17 @@ public class User
         return myHoldings;
     }
     public String toString(){
-        System.out.println(myHoldings.toString());
-        return myHoldings.toString();
-
+        String result = "Your Holdings: \n";
+        for (Holding holding : myHoldings){
+            result+="You own ";
+            result+=holding.getQuantity();
+            result+=" shares of ";
+            result+=holding.getMyStock().getSymbol();
+            result+=" which is worth: $";
+            result+=holding.getMyStock().getPrice()*Double.parseDouble(Integer.toString(holding.getQuantity()));
+            result+="\n";
+        }
+        return result;
     }
 
 }

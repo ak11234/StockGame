@@ -32,4 +32,5 @@ public class Holding
     {
         return myQuantity;
     }
+
 }

@@ -128,7 +128,7 @@ public class Game extends GraphicsProgram {
             System.out.println(key);
             System.out.println(symbolEntered.getText());
             System.out.println(qualifiedQuantity);
-            System.out.println(user.getMyHoldings().toString());
+            System.out.println(user);
 
         }
     }
