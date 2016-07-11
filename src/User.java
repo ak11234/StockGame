@@ -29,7 +29,13 @@ public class User
             //checks all of my holdings to see if the symbol given is the same as one of my holdings
             {
                 myHoldings.set(k, myHoldings.get(k).changeQuantity(q));
+                
                 //sets that holding to be the result of change quantity
+                
+                myCash = myCash- myHoldings.get(k).getMyStock().getPrice() * myHoldings.get(k).getQuantity();
+                
+                //subtracts cash
+                
                 return; //ends the function  
             }//the holding exists, change its quantity using the method changeQuantity
         }    
@@ -41,6 +47,13 @@ public class User
                 Holding h;
                 h = new Holding(q, myGame.getTheStocks()[j]);
                 myHoldings.add(h);
+                
+                //creates new holding
+                
+                myCash = myCash- myHoldings.get(j).getMyStock().getPrice() * myHoldings.get(j).getQuantity();
+                
+                //subtracts cash
+                
                 return;
             }
         }
@@ -48,6 +61,14 @@ public class User
     
     public double getMyNetworth()
     {
+        myNetworth = myCash;
+        for(int k=0; k<myHoldings.size(); k++)
+        {
+            myNetworth = myNetworth+
+                (myHoldings.get(k).getMyStock().getPrice() * myHoldings.get(k).getQuantity());
+            
+        }//sets networth
+        
         return myNetworth;
     }
 
@@ -72,6 +93,9 @@ public class User
             result+=holding.getMyStock().getPrice()*Double.parseDouble(Integer.toString(holding.getQuantity()));
             result+="\n";
         }
+        
+        result+="Your cash: "+myCash+"\n";
+        result+="Your Net Worth: "+myNetworth+"\n";
         return result;
     }
 

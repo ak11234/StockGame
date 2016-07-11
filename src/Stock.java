@@ -1,7 +1,7 @@
 import org.apache.commons.math3.distribution.NormalDistribution;
 
 /**
- * Created by Adam on 7/8/2016. Stock object
+ * Created by Josh on 7/8/2016. Stock object
  */
 public class Stock {
     private int index;
