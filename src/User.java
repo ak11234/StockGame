@@ -28,7 +28,8 @@ public class User
             if(myHoldings.get(k).getMyStock().getSymbol().equals(s)) 
             //checks all of my holdings to see if the symbol given is the same as one of my holdings
             {
-                myHoldings.get(k).changeQuantity(q);
+                myHoldings.set(k, myHoldings.get(k).changeQuantity(q));
+                //sets that holding to be the result of change quantity
                 return; //ends the function  
             }//the holding exists, change its quantity using the method changeQuantity
         }    
