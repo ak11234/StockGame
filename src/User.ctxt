@@ -1,10 +1,12 @@
 #BlueJ class context
-comment0.params=
-comment0.target=User()
-comment1.params=
-comment1.target=double\ getMyNetworth()
+comment0.params=g
+comment0.target=User(Game)
+comment1.params=s\ q
+comment1.target=void\ updateHoldings(java.lang.String,\ int)
 comment2.params=
-comment2.target=double\ getMyCash()
+comment2.target=double\ getMyNetworth()
 comment3.params=
-comment3.target=java.util.ArrayList\ getMyHoldings()
-numComments=4
+comment3.target=double\ getMyCash()
+comment4.params=
+comment4.target=java.util.ArrayList\ getMyHoldings()
+numComments=5

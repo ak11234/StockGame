@@ -16,15 +16,20 @@ public class Game extends GraphicsProgram {
     JTextField quantityEntered = new JTextField(9);
 
     public static void main(String[] args){
-
+        
         Game myGame = new Game();
         myGame.start();
     }
-
+    
+    public Stock[] getTheStocks()
+    {
+        return TheStocks;
+    }
+    
     public void init()
     {
         Stock [] myStocks = new Stock[30];
-        
+        User user = new User(this);
         
         TheStocks = new Stock[30];
         // requirements (int newIndex, String newSymbol, double newStartPrice, double newSd, double newMeanReturn)
@@ -70,6 +75,7 @@ public class Game extends GraphicsProgram {
         add(stockChart);*/
 
     }
+    
     public void run(){
         for (Stock k : Game.TheStocks){
             GLabel stock = new GLabel(k.toString(), 15, 35+(k.getIndex()*20));
@@ -85,8 +91,11 @@ public class Game extends GraphicsProgram {
         addActionListeners();
 
         Update update = new Update(TheStocks);
-
+        new Thread(update).start();
+        User user = new User(this);
+        System.out.println(user.getMyHoldings());
     }
+    
     public void actionPerformed(ActionEvent e){
         String key;
         key = e.getActionCommand();
