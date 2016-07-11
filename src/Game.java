@@ -17,7 +17,6 @@ public class Game extends GraphicsProgram {
     User user;
 
     public static void main(String[] args){
-        
         Game myGame = new Game();
         myGame.start();
     }
