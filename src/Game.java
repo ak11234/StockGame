@@ -31,7 +31,8 @@ public class Game extends GraphicsProgram implements Runnable{
     public void init()
     {
         Stock [] myStocks = new Stock[30];
-        user = new User(this);
+        user= new User(this);
+        new Thread(user).start();
         distMarket= new NormalDistribution(0.1/230, 0.2/(Math.sqrt(230)));
         TheStocks = new Stock[30];
         // requirements (int newIndex, String newSymbol, double newStartPrice, double newSd, double newMeanReturn)

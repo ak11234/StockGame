@@ -1,19 +1,25 @@
+import acm.graphics.GLabel;
+
+import javax.swing.*;
 import java.util.ArrayList;
-import java.util.Arrays;
+
+
+import static javax.swing.SwingConstants.SOUTH;
 
 /**
  * The user class
  * 
  * @author (Josh Gross) 
  */
-public class User
-{
+public class User extends GLabel implements Runnable {
     private double myNetworth;
     private double myCash;
     private ArrayList<Holding> myHoldings;
-    private Game myGame; 
+    private Game myGame;
+
     public User(Game g)
     {
+        super("", 0, 0);
         // initialise instance variables
         myCash= 1000000;
         myNetworth=myCash;
@@ -28,8 +34,9 @@ public class User
             if(myHoldings.get(k).getMyStock().getSymbol().equals(s)) 
             //checks all of my holdings to see if the symbol given is the same as one of my holdings
             {
-                myHoldings.set(k, myHoldings.get(k).changeQuantity(q));
-                
+
+                myHoldings.get(k).setQuantity(q);
+
                 //sets that holding to be the result of change quantity
                 
                 myCash = myCash- myGame.getTheStocks()[k].getPrice() * q;
@@ -45,8 +52,9 @@ public class User
             if(myGame.getTheStocks()[j].getSymbol().equals(s))
             {
                 Holding h;
-                h = new Holding(q, myGame.getTheStocks()[j]);
+                h = new Holding(q, myGame.getTheStocks()[j], myGame);
                 myHoldings.add(h);
+                new Thread(h).start();
                 
                 //creates new holding
                 
@@ -93,10 +101,21 @@ public class User
             result+=holding.getMyStock().getPrice()*Double.parseDouble(Integer.toString(holding.getQuantity()));
             result+="\n";
         }
-        
-        result+="Your cash: "+myCash+"\n";
+        result+="Your cash: "+myCash+"\n ";
         result+="Your Net Worth: "+myNetworth+"\n";
         return result;
+    }
+    public void run(){
+        move(1000, 50);
+        setLabel(toString());
+        myGame.add(this);
+        while (true){
+            for (int k=0; k<myHoldings.size(); k++){
+                myHoldings.get(k).setLocation(1000, 100+(k*20));
+            }
+            pause(1000);
+        }
+
     }
 
 }
