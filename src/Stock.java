@@ -38,7 +38,7 @@ public class Stock {
     }
     
     public String toString(){
-        return ("Symbol: " + symbol + "\t Current Price: " + currentPrice);
+        return ("Symbol: " + symbol + "\t   Current Price: " + currentPrice);
     }
     
     public int getIndex(){

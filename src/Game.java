@@ -4,6 +4,7 @@ import acm.program.GraphicsProgram;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
+import java.util.ArrayList;
 
 
 /**
@@ -11,10 +12,10 @@ import java.awt.event.ActionEvent;
  */
 public class Game extends GraphicsProgram {
     public static Stock[] TheStocks;
-    private String rawStockChart;
     JTextField symbolEntered = new JTextField(9);
     JTextField quantityEntered = new JTextField(9);
     User user;
+    ArrayList<GLabel> stockLabels;
 
     public static void main(String[] args){
         Game myGame = new Game();
@@ -77,10 +78,10 @@ public class Game extends GraphicsProgram {
     }
     
     public void run(){
-        for (Stock k : Game.TheStocks){
+/*        for (Stock k : Game.TheStocks){
             GLabel stock = new GLabel(k.toString(), 15, 35+(k.getIndex()*20));
             add(stock);
-        }
+        }*/
 
         add(new JLabel("Stock Symbol: "), SOUTH);
         add(symbolEntered, SOUTH);
@@ -90,10 +91,14 @@ public class Game extends GraphicsProgram {
         add(new JButton("Sell"), SOUTH);
         addActionListeners();
 
-        Update update = new Update(TheStocks);
+        Update update = new Update(this);
         new Thread(update).start();
         User user = new User(this);
         System.out.println(user.getMyHoldings());
+        int x=0;
+        while (true){
+            x+=1;
+        }
     }
     
     public void actionPerformed(ActionEvent e){
