@@ -18,6 +18,23 @@ public class User
         myHoldings=null;
     }
     
+    public void updateHoldings(String s, int q)
+    {
+        for(int k=0, k<=myHoldings.size(), k++)
+        {
+            if(myHoldings.get(k).getMyStock().getSymbol().equals(s)) 
+            //checks all of my holdings to see if the symbol given is the same as one of my holdings
+            {
+                myHoldings.get(k).changeQuantity(q);
+            }//the holding exists, change its quantity using the method changeQuantity
+            else
+            { //the holding does not exist, make a new holding with the given variables 
+                Holding s;
+                s = new Holding(s, q);
+            }
+        }
+    }
+    
     public double getMyNetworth()
     {
         return myNetworth;
@@ -32,4 +49,5 @@ public class User
     {
         return myHoldings;
     }
+    
 }

@@ -15,12 +15,21 @@ public class Holding
         myQuantity= Q;
         myStock= S;
     }
-
     
     public Holding changeQuantity(int x)
     {
        Holding update;
        update= new Holding(myQuantity+x, myStock);
        return update;
+    }
+    
+    public Stock getMyStock()
+    {
+        return myStock;
+    }
+    
+    public int getQuantity()
+    {
+        return myQuantity;
     }
 }
