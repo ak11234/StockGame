@@ -27,7 +27,7 @@ public class User
             //checks all of my holdings to see if the symbol given is the same as one of my holdings
             {
                 myHoldings.get(k).changeQuantity(q);
-                return;
+                return; //ends the function  
             }//the holding exists, change its quantity using the method changeQuantity
         }    
         
@@ -38,6 +38,7 @@ public class User
                 Holding h;
                 h = new Holding(q, myGame.getTheStocks()[j]);
                 myHoldings.add(h);
+                return;
             }
         }
     }

@@ -65,7 +65,7 @@ public class Game extends GraphicsProgram {
         TheStocks[28]= new Stock (28, "V", 76.13, 1, 1);   //Visa
         TheStocks[29]= new Stock (29, "WMT", 73.56, 1, 1); //Walmart
 
-/*        rawStockChart="<html>";
+        /* rawStockChart="<html>";
         for(Stock k : Game.TheStocks){
             rawStockChart+=k.toString();
             rawStockChart+="<br><br>";
