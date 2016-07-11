@@ -37,7 +37,16 @@ public class Stock extends GLabel implements Runnable {
     public int getIndex(){
         return index;
     }
-    
+    public void updateLabel(){
+        setLabel(toString());
+    }
+    public void setPrice(double newPrice){
+        currentPrice=newPrice;
+        updateLabel();
+    }
+    public void init(){
+
+    }
     //changes the price of an individual stock object
     public void run() {
         while(true){
@@ -45,7 +54,7 @@ public class Stock extends GLabel implements Runnable {
             double market = Double.parseDouble(distMarket.toString());
             double me = Double.parseDouble(distMarket.toString());
             double newPrice = currentPrice*(1+market)*(1+me);
-            currentPrice=newPrice;
+            setPrice(newPrice);
         }
     }
 }
