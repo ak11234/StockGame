@@ -13,6 +13,7 @@ public class Stock extends GLabel implements Runnable {
     
     //constructor
     public Stock(int newIndex, String newSymbol, double newStartPrice, double newSd, double newMeanReturn){
+        super("", 0, 0);
         symbol=newSymbol;
         currentPrice=newStartPrice;
         index= newIndex ;
