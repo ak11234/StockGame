@@ -90,7 +90,7 @@ public class Game extends GraphicsProgram {
         add(new JButton("Sell"), SOUTH);
         addActionListeners();
 
-        Update update = new Update(TheStocks);
+        Update update = new Update();
         new Thread(update).start();
         User user = new User(this);
         System.out.println(user.getMyHoldings());
