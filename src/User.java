@@ -32,7 +32,7 @@ public class User
                 
                 //sets that holding to be the result of change quantity
                 
-                myCash = myCash- myHoldings.get(k).getMyStock().getPrice() * myHoldings.get(k).getQuantity();
+                myCash = myCash- myGame.getTheStocks()[k].getPrice() * q;
                 
                 //subtracts cash
                 
@@ -50,7 +50,7 @@ public class User
                 
                 //creates new holding
                 
-                myCash = myCash- myHoldings.get(j).getMyStock().getPrice() * myHoldings.get(j).getQuantity();
+                myCash = myCash- myGame.getTheStocks()[j].getPrice() * q;
                 
                 //subtracts cash
                 
