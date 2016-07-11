@@ -96,9 +96,6 @@ public class Game extends GraphicsProgram {
         User user = new User(this);
         System.out.println(user.getMyHoldings());
         int x=0;
-        while (true){
-            x+=1;
-        }
     }
     
     public void actionPerformed(ActionEvent e){
