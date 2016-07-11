@@ -11,6 +11,7 @@ public class Stock extends GLabel implements Runnable {
     private double quantity=0.0;
     private double startPrice, changePrice, changePercent, currentPrice;
     private Game myGame;
+    private int x, y;
 
     //constructor
     public Stock(int newIndex, String newSymbol, double newStartPrice, double newSd, double newMeanReturn, Game g){
@@ -55,6 +56,9 @@ public class Stock extends GLabel implements Runnable {
 
     //changes the price of an individual stock object
     public void run() {
+        move(15, 35+(index*20));
+        setLabel(toString());
+        myGame.add(this);
         while(true){
             
             NormalDistribution distMe= new NormalDistribution(0.1*meanReturn/230, 0.2*sd/(Math.sqrt(230)));

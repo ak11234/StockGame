@@ -33,7 +33,6 @@ public class Game extends GraphicsProgram implements Runnable{
         Stock [] myStocks = new Stock[30];
         user = new User(this);
         distMarket= new NormalDistribution(0.1/230, 0.2/(Math.sqrt(230)));
-     
         TheStocks = new Stock[30];
         // requirements (int newIndex, String newSymbol, double newStartPrice, double newSd, double newMeanReturn)
         TheStocks[0] = new Stock (0, "MMM", 176.71, 1, 1, this); //3M
@@ -67,16 +66,9 @@ public class Game extends GraphicsProgram implements Runnable{
         TheStocks[28]= new Stock (28, "V", 76.13, 1, 1, this);   //Visa
         TheStocks[29]= new Stock (29, "WMT", 73.56, 1, 1, this); //Walmart
 
-        /* rawStockChart="<html>";
-        for(Stock k : Game.TheStocks){
-            rawStockChart+=k.toString();
-            rawStockChart+="<br><br>";
+        for (Stock stock : TheStocks){
+            new Thread(stock).start();
         }
-        rawStockChart+="</html>";
-        System.out.println(rawStockChart);
-        stockChart.setText(rawStockChart);
-        add(stockChart);*/
-
     }
     
     public void run(){
@@ -93,8 +85,6 @@ public class Game extends GraphicsProgram implements Runnable{
         add(new JButton("Sell"), SOUTH);
         addActionListeners();
 
-        Update update = new Update(this);
-        new Thread(update).start();
         User user = new User(this);
         System.out.println(user.getMyHoldings());
         int x=0;
