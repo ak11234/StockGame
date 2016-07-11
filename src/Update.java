@@ -15,6 +15,7 @@ public class Update implements Runnable {
     public void init(){
         System.out.println("hello");
     }
+    
     public void run(){
         myGame.stockLabels = new ArrayList<GLabel>();
         for (int k = 0; k<Game.TheStocks.length; k++){

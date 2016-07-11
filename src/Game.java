@@ -1,7 +1,7 @@
 import acm.graphics.*;
 import acm.gui.TableLayout;
 import acm.program.GraphicsProgram;
-
+import org.apache.commons.math3.distribution.NormalDistribution;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
@@ -78,7 +78,7 @@ public class Game extends GraphicsProgram {
     }
     
     public void run(){
-/*        for (Stock k : Game.TheStocks){
+        /*        for (Stock k : Game.TheStocks){
             GLabel stock = new GLabel(k.toString(), 15, 35+(k.getIndex()*20));
             add(stock);
         }*/
@@ -96,6 +96,11 @@ public class Game extends GraphicsProgram {
         User user = new User(this);
         System.out.println(user.getMyHoldings());
         int x=0;
+        
+        while(true){
+            pause(60000);
+            NormalDistribution distMarket= new NormalDistribution(0.1/230, 0.2/(Math.sqrt(230)));
+        }
     }
     
     public void actionPerformed(ActionEvent e){
