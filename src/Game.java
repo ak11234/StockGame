@@ -14,6 +14,7 @@ public class Game extends GraphicsProgram {
     private String rawStockChart;
     JTextField symbolEntered = new JTextField(9);
     JTextField quantityEntered = new JTextField(9);
+    User user;
 
     public static void main(String[] args){
         
@@ -29,7 +30,7 @@ public class Game extends GraphicsProgram {
     public void init()
     {
         Stock [] myStocks = new Stock[30];
-        User user = new User(this);
+        user = new User(this);
         
         TheStocks = new Stock[30];
         // requirements (int newIndex, String newSymbol, double newStartPrice, double newSd, double newMeanReturn)
@@ -126,6 +127,7 @@ public class Game extends GraphicsProgram {
             System.out.println(key);
             System.out.println(symbolEntered.getText());
             System.out.println(qualifiedQuantity);
+
         }
     }
 }
