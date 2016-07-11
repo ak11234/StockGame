@@ -132,12 +132,6 @@ public class Game extends GraphicsProgram implements Runnable{
             } else {
                 System.out.println("Invalid Entry");
             }
-            
-            System.out.println("----------");
-            System.out.println(key);
-            System.out.println(symbolEntered.getText());
-            System.out.println(qualifiedQuantity);
-            System.out.println(user);
 
         }
     }

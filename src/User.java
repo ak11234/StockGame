@@ -91,16 +91,7 @@ public class User extends GLabel implements Runnable {
     }
     
     public String toString(){
-        String result = "Your Holdings: \n";
-        for (Holding holding : myHoldings){
-            result+="You own ";
-            result+=holding.getQuantity();
-            result+=" shares of ";
-            result+=holding.getMyStock().getSymbol();
-            result+=" which is worth: $";
-            result+=holding.getMyStock().getPrice()*Double.parseDouble(Integer.toString(holding.getQuantity()));
-            result+="\n";
-        }
+        String result = "";
         result+="Your cash: "+myCash+"\n ";
         result+="Your Net Worth: "+myNetworth+"\n";
         return result;
@@ -113,6 +104,7 @@ public class User extends GLabel implements Runnable {
             for (int k=0; k<myHoldings.size(); k++){
                 myHoldings.get(k).setLocation(1000, 100+(k*20));
             }
+            setLabel(toString());
             pause(1000);
         }
 
