@@ -85,9 +85,7 @@ public class Game extends GraphicsProgram {
         addActionListeners();
 
         Update update = new Update(TheStocks);
-        new Thread(update).start();
-        User user = new User();
-        System.out.println(user.getMyHoldings());
+
     }
     public void actionPerformed(ActionEvent e){
         String key;
@@ -95,5 +93,31 @@ public class Game extends GraphicsProgram {
         System.out.println(key);
         System.out.println(symbolEntered.getText());
         System.out.println(quantityEntered.getText());
+        if (key.equals("Buy") || key.equals("Sell")){ //If we are buying/selling
+            boolean validSymbol = false;
+            boolean validQuantity = false;
+            int qualifiedQuantity=Integer.parseInt(quantityEntered.getText());
+            boolean buySell; //Buy is true, sell is false;
+            for (Stock stock : TheStocks){
+                if (stock.getSymbol().equals(symbolEntered.getText())){ //If its found, mark valid
+                    validSymbol=true;
+                }
+            }
+            if (qualifiedQuantity>0){
+                validQuantity=true;
+                if (key.equals("Sell")){
+                    qualifiedQuantity= -qualifiedQuantity;
+                }
+            }
+            if (validSymbol&&validQuantity){
+                //Do the trade in question
+            } else {
+                System.out.println("Invalid Entry");
+            }
+            System.out.println("----------");
+            System.out.println(key);
+            System.out.println(symbolEntered.getText());
+            System.out.println(qualifiedQuantity);
+        }
     }
 }
