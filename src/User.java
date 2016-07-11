@@ -93,6 +93,9 @@ public class User
             result+=holding.getMyStock().getPrice()*Double.parseDouble(Integer.toString(holding.getQuantity()));
             result+="\n";
         }
+        
+        result+="Your cash: "+myCash+"\n";
+        result+="Your Net Worth: "+myNetworth+"\n";
         return result;
     }
 
