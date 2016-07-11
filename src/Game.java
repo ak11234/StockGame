@@ -17,7 +17,6 @@ public class Game extends GraphicsProgram {
     User user;
 
     public static void main(String[] args){
-        
         Game myGame = new Game();
         myGame.start();
     }
@@ -103,27 +102,32 @@ public class Game extends GraphicsProgram {
         System.out.println(key);
         System.out.println(symbolEntered.getText());
         System.out.println(quantityEntered.getText());
+        
         if (key.equals("Buy") || key.equals("Sell")){ //If we are buying/selling
             boolean validSymbol = false;
             boolean validQuantity = false;
             int qualifiedQuantity=Integer.parseInt(quantityEntered.getText());
+            
             for (Stock stock : TheStocks){ //Make sure they entered a valid stock symbol
                 if (stock.getSymbol().equals(symbolEntered.getText())){ //If its found, mark valid
                     validSymbol=true;
                 }
             }
+            
             if (qualifiedQuantity>0){ //Quantity must be bigger than 0 (positive)
                 validQuantity=true;
                 if (key.equals("Sell")){
                     qualifiedQuantity= -qualifiedQuantity; //Reverse the number if the order is to sell
                 }
             }
+            
             if (validSymbol&&validQuantity){
                 //Do the trade in question
                 user.updateHoldings(symbolEntered.getText(), qualifiedQuantity);
             } else {
                 System.out.println("Invalid Entry");
             }
+            
             System.out.println("----------");
             System.out.println(key);
             System.out.println(symbolEntered.getText());

@@ -59,6 +59,7 @@ public class User
     {
         return myHoldings;
     }
+    
     public String toString(){
         String result = "Your Holdings: \n";
         for (Holding holding : myHoldings){
