@@ -17,6 +17,8 @@ public class Game extends GraphicsProgram implements Runnable{
     User user;
     ArrayList<GLabel> stockLabels;
     NormalDistribution distMarket;
+    public int speed=20000;
+    private JLabel speedLabel;
 
     public static void main(String[] args){
         Game myGame = new Game();
@@ -84,6 +86,18 @@ public class Game extends GraphicsProgram implements Runnable{
         add(quantityEntered, SOUTH);
         add(new JButton("Buy") ,SOUTH);
         add(new JButton("Sell"), SOUTH);
+
+        add(new JButton("U.S. Postal Service"), NORTH);
+        add(new JButton("Dial-up Internet"), NORTH);
+        add(new JButton("Toyota Prius"), NORTH);
+        add(new JButton("Light Speed"), NORTH);
+        add(new JButton("Ridiculous Speed"), NORTH);
+        add(new JButton("Ludicrous Speed"), NORTH);
+
+        add(new JLabel("  Current Speed: "), NORTH);
+        speedLabel = new JLabel("U.S. Postal Service");
+        add(speedLabel, NORTH);
+
         addActionListeners();
 
         User user = new User(this);
@@ -130,6 +144,30 @@ public class Game extends GraphicsProgram implements Runnable{
                 System.out.println("Invalid Entry");
             }
 
+        }
+        if (key.equals("U.S. Postal Service")){
+            speed=20000;
+            speedLabel.setText(key);
+        }
+        if (key.equals("Dial-up Internet")){
+            speed=10000;
+            speedLabel.setText(key);
+        }
+        if (key.equals("Toyota Prius")){
+            speed=8000;
+            speedLabel.setText(key);
+        }
+        if (key.equals("Light Speed")){
+            speed=5000;
+            speedLabel.setText(key);
+        }
+        if (key.equals("Ridiculous Speed")){
+            speed=2000;
+            speedLabel.setText(key);
+        }
+        if (key.equals("Ludicrous Speed")){
+            speed=500;
+            speedLabel.setText(key);
         }
     }
 }

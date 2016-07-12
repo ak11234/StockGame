@@ -51,7 +51,7 @@ public class Holding extends GLabel implements Runnable
         myGame.add(this);
         while (true){
             setLabel(toString());
-            pause(1000);
+            pause(myGame.speed);
         }
 
     }
