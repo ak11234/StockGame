@@ -11,4 +11,6 @@ comment4.params=
 comment4.target=org.apache.commons.math3.distribution.NormalDistribution\ getDistMarket()
 comment5.params=e
 comment5.target=void\ actionPerformed(java.awt.event.ActionEvent)
-numComments=6
+comment6.params=e
+comment6.target=void\ keyPressed(java.awt.event.KeyEvent)
+numComments=7
