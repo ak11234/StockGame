@@ -107,6 +107,7 @@ public class User extends GLabel implements Runnable {
                     myHoldings.get(k).setVisible(false);
                     myHoldings.get(k).setLabel(null);
                     myHoldings.remove(k);
+                    break;
                 }
                 myHoldings.get(k).setLocation(800, 100+(k*20));
             }
