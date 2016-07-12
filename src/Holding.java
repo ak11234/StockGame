@@ -13,6 +13,7 @@ public class Holding extends GLabel implements Runnable
     private int myQuantity;
     private Stock myStock;
     private Game myGame;
+    private double buyPrice;
     //a holding is initialized with a stock and the initial buy quantity
     public Holding(int Q, Stock S, Game game)
     {
@@ -20,6 +21,7 @@ public class Holding extends GLabel implements Runnable
         myQuantity= Q;
         myStock= S;
         myGame=game;
+        buyPrice=myStock.getPrice();
     }
     
     public Holding changeQuantity(int x)
@@ -55,7 +57,7 @@ public class Holding extends GLabel implements Runnable
     }
     
     public String toString(){
-        return ("You own: " + myQuantity + " of: " + myStock.getSymbol() + " which is worth " +new DecimalFormat("#.##").format(myStock.getPrice()*myQuantity));
+        return ("You own: " + myQuantity + " of: " + myStock.getSymbol() + " which is worth " +new DecimalFormat("#.##").format(myStock.getPrice()*myQuantity) + " It was purchased at:  " + new DecimalFormat("#.##").format(buyPrice));
     }
 
 }

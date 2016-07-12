@@ -98,7 +98,7 @@ public class User extends GLabel implements Runnable {
         return result;
     }
     public void run(){
-        move(1000, 50);
+        move(800, 50);
         setLabel(toString());
         myGame.add(this);
         while (true){
@@ -108,7 +108,7 @@ public class User extends GLabel implements Runnable {
                     myHoldings.get(k).setLabel(null);
                     myHoldings.remove(k);
                 }
-                myHoldings.get(k).setLocation(1000, 100+(k*20));
+                myHoldings.get(k).setLocation(800, 100+(k*20));
             }
             setLabel(toString());
             pause(1000);
