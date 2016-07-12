@@ -103,6 +103,11 @@ public class User extends GLabel implements Runnable {
         myGame.add(this);
         while (true){
             for (int k=0; k<myHoldings.size(); k++){
+                if (myHoldings.get(k).getQuantity()<1){
+                    myHoldings.get(k).setVisible(false);
+                    myHoldings.get(k).setLabel(null);
+                    myHoldings.remove(k);
+                }
                 myHoldings.get(k).setLocation(1000, 100+(k*20));
             }
             setLabel(toString());
