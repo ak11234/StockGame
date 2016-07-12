@@ -8,7 +8,7 @@ import java.text.DecimalFormat;
  * Created by Josh and Adam on 7/8/2016. Stock object
  */
 public class Stock extends GLabel implements Runnable {
-    private int index;
+    private String name;
     private String symbol;
     private double sd, meanReturn;
     private double quantity=0.0;
@@ -16,16 +16,17 @@ public class Stock extends GLabel implements Runnable {
     private Game myGame;
     private int x, y;
     private String didGrow="^";
-
+    private int index;
     //constructor
-    public Stock(int newIndex, String newSymbol, double newStartPrice, double newSd, double newMeanReturn, Game g){
+    public Stock(String newName, String newSymbol, double newStartPrice, double newSd, double newMeanReturn, Game g, int newindex){
         super("", 0, 0);
         symbol=newSymbol;
         currentPrice=newStartPrice;
-        index= newIndex ;
+        name=newName ;
         sd= newSd;
         meanReturn= newMeanReturn;
         myGame = g;
+        index = newindex; 
     }
 
     public double getPrice(){
@@ -35,13 +36,17 @@ public class Stock extends GLabel implements Runnable {
     public String getSymbol(){
         return symbol;
     }
-
-    public String toString(){
-        return ("Symbol: " + symbol + "\t   Current Price: " + new DecimalFormat("#.##").format(currentPrice)) +"   "+didGrow;
-    }
-
+    
     public int getIndex(){
         return index;
+    }
+
+    public String toString(){
+        return (name+", Symbol: " + symbol + "\t   Current Price: " + new DecimalFormat("#.##").format(currentPrice)) +"   "+didGrow;
+    }
+
+    public String getName(){
+        return name;
     }
 
     public void updateLabel(){
