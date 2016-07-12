@@ -111,7 +111,7 @@ public class User extends GLabel implements Runnable {
                 myHoldings.get(k).setLocation(800, 100+(k*20));
             }
             setLabel(toString());
-            pause(myGame.speed);
+            pause(500);
         }
     }
 }
