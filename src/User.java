@@ -1,6 +1,7 @@
 import acm.graphics.GLabel;
 
 import javax.swing.*;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 
@@ -92,8 +93,8 @@ public class User extends GLabel implements Runnable {
     
     public String toString(){
         String result = "";
-        result+="Your cash: "+myCash+"\n ";
-        result+="Your Net Worth: "+getMyNetworth()+"\n";
+        result+="Your cash: "+ new DecimalFormat("#.##").format(myCash) + "\t    ";
+        result+="Your Net Worth: "+ new DecimalFormat("#.##").format(getMyNetworth());
         return result;
     }
     public void run(){
@@ -105,7 +106,7 @@ public class User extends GLabel implements Runnable {
                 myHoldings.get(k).setLocation(1000, 100+(k*20));
             }
             setLabel(toString());
-            pause(10000);
+            pause(1000);
         }
 
     }

@@ -1,6 +1,8 @@
 import acm.graphics.GLabel;
 import org.apache.commons.math3.distribution.NormalDistribution;
 
+import java.text.DecimalFormat;
+
 /**
  * Created by Josh and Adam on 7/8/2016. Stock object
  */
@@ -33,7 +35,7 @@ public class Stock extends GLabel implements Runnable {
     }
 
     public String toString(){
-        return ("Symbol: " + symbol + "\t   Current Price: " + currentPrice);
+        return ("Symbol: " + symbol + "\t   Current Price: " + new DecimalFormat("#.##").format(currentPrice));
     }
 
     public int getIndex(){

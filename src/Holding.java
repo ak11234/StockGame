@@ -1,6 +1,7 @@
 import acm.graphics.GLabel;
 
 import javax.swing.*;
+import java.text.DecimalFormat;
 
 /**
  * Write a description of class Holdings here.
@@ -48,13 +49,13 @@ public class Holding extends GLabel implements Runnable
         myGame.add(this);
         while (true){
             setLabel(toString());
-            pause(10000);
+            pause(1000);
         }
 
     }
     
     public String toString(){
-        return ("You own: " + myQuantity + " of: " + myStock.getSymbol() + " which is worth " + myStock.getPrice()*myQuantity);
+        return ("You own: " + myQuantity + " of: " + myStock.getSymbol() + " which is worth " +new DecimalFormat("#.##").format(myStock.getPrice()*myQuantity));
     }
 
 }
