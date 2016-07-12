@@ -91,7 +91,7 @@ public class Game extends GraphicsProgram implements Runnable{
         int x=0;
         
         while(true){
-            pause(1000);
+            pause(10000);
             distMarket= new NormalDistribution(0.1/230, 0.2/(Math.sqrt(230)));
         }
     }
