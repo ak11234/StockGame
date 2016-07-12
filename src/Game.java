@@ -3,7 +3,9 @@ import acm.gui.TableLayout;
 import acm.program.GraphicsProgram;
 import org.apache.commons.math3.distribution.NormalDistribution;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
 
@@ -19,6 +21,10 @@ public class Game extends GraphicsProgram implements Runnable{
     NormalDistribution distMarket;
     public int speed=20000;
     private JLabel speedLabel;
+    static private int[] code =
+            {38, 38, 40, 40, 37, 39, 37, 39, 66, 65};
+    static private int[] codeIn;
+    private int currentIndex;
 
     public static void main(String[] args){
         Game myGame = new Game();
@@ -36,7 +42,9 @@ public class Game extends GraphicsProgram implements Runnable{
         user= new User(this);
         new Thread(user).start();
         distMarket= new NormalDistribution(0.1/230, 0.2/(Math.sqrt(230)));
+        codeIn=new int[10];
         TheStocks = new Stock[30];
+        currentIndex=0;
         // requirements (int newIndex, String newSymbol, double newStartPrice, double newSd, double newMeanReturn)
         TheStocks[0] = new Stock (0, "MMM", 176.71, 1, 1, this); //3M
         TheStocks[1] = new Stock (1, "AXP", 61.35, 1, 1, this);  //American Express
@@ -68,7 +76,7 @@ public class Game extends GraphicsProgram implements Runnable{
         TheStocks[27]= new Stock (27, "VZ", 55.90, 1, 1, this);  //Verizon
         TheStocks[28]= new Stock (28, "V", 76.13, 1, 1, this);   //Visa
         TheStocks[29]= new Stock (29, "WMT", 73.56, 1, 1, this); //Walmart
-
+        setBackground(new Color(56, 179, 244));
         for (Stock stock : TheStocks){
             new Thread(stock).start();
         }
@@ -99,6 +107,7 @@ public class Game extends GraphicsProgram implements Runnable{
         add(speedLabel, NORTH);
 
         addActionListeners();
+        addKeyListeners();
 
         User user = new User(this);
         System.out.println(user.getMyHoldings());
@@ -169,5 +178,14 @@ public class Game extends GraphicsProgram implements Runnable{
             speed=500;
             speedLabel.setText(key);
         }
+    }
+    public void keyPressed(KeyEvent e){
+        System.out.println(e);
+        System.out.println(e.getKeyCode());
+        if (e.getKeyCode()!=10) {
+            codeIn[currentIndex] = e.getKeyCode();
+            currentIndex++;
+        }
+
     }
 }
