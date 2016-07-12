@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="EasyVisuals">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../EasyVisuals/out/artifacts/EasyVisuals_jar/EasyVisuals.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

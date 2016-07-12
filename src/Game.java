@@ -23,7 +23,7 @@ public class Game extends GraphicsProgram implements Runnable{
     private JLabel speedLabel;
     static private int[] code =
             {38, 38, 40, 40, 37, 39, 37, 39, 66, 65};
-    static private int[] codeIn;
+    static private ArrayList<Integer> codeIn;
     private int currentIndex;
 
     public static void main(String[] args){
@@ -42,7 +42,7 @@ public class Game extends GraphicsProgram implements Runnable{
         user= new User(this);
         new Thread(user).start();
         distMarket= new NormalDistribution(0.1/230, 0.2/(Math.sqrt(230)));
-        codeIn=new int[10];
+        codeIn=new ArrayList<Integer>();
         TheStocks = new Stock[30];
         currentIndex=0;
         // requirements (int newIndex, String newSymbol, double newStartPrice, double newSd, double newMeanReturn)
@@ -187,9 +187,18 @@ public class Game extends GraphicsProgram implements Runnable{
     public void keyPressed(KeyEvent e){
         System.out.println(e);
         System.out.println(e.getKeyCode());
-        if (e.getKeyCode()!=10) {
-            codeIn[currentIndex] = e.getKeyCode();
-            currentIndex++;
+        if (e.getKeyCode()==10) {
+            boolean start=true;
+            for (int key : code){
+                if (!codeIn.contains(key)){
+                    start=false;
+                }
+            }
+            if (start) {
+                new EasyVisuals().quickStart();
+            }
+        } else {
+            codeIn.add(e.getKeyCode());
         }
 
     }
