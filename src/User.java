@@ -107,7 +107,5 @@ public class User extends GLabel implements Runnable {
             setLabel(toString());
             pause(10000);
         }
-
     }
-
 }
