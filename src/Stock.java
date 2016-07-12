@@ -37,7 +37,7 @@ public class Stock extends GLabel implements Runnable {
     }
 
     public String toString(){
-        return ("Symbol: " + symbol + "\t   Current Price: " + new DecimalFormat("#.##").format(currentPrice)) +didGrow;
+        return ("Symbol: " + symbol + "\t   Current Price: " + new DecimalFormat("#.##").format(currentPrice)) +"   "+didGrow;
     }
 
     public int getIndex(){
