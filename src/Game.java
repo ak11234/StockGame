@@ -76,7 +76,7 @@ public class Game extends GraphicsProgram implements Runnable{
         TheStocks[27]= new Stock ("Verizon", "VZ", 55.90, 1, 1, this, 28);  //Verizon
         TheStocks[28]= new Stock ("Visa", "V", 76.13, 1, 1, this, 29);   //Visa
         TheStocks[29]= new Stock ("Walmart", "WMT", 73.56, 1, 1, this, 30); //Walmart
-
+        setBackground(new Color(56, 179, 244));
         for (Stock stock : TheStocks){
             new Thread(stock).start();
         }
