@@ -143,7 +143,7 @@ public class Game extends GraphicsProgram implements Runnable{
             } else {
                 System.out.println("Invalid Entry");
             }
-
+            
         }
         if (key.equals("U.S. Postal Service")){
             speed=20000;
