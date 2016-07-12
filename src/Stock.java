@@ -35,7 +35,7 @@ public class Stock extends GLabel implements Runnable {
     }
 
     public String toString(){
-        return ("Symbol: " + symbol + "\t   Current Price: " + new DecimalFormat("#.##").format(currentPrice));
+        return ("Symbol: " + symbol + "\t   Current Price: " + currentPrice);
     }
 
     public int getIndex(){
@@ -63,13 +63,16 @@ public class Stock extends GLabel implements Runnable {
         setLabel(toString());
         myGame.add(this);
         while(true){
-            pause(10000);
+            pause(1000);
             
             NormalDistribution distMe= new NormalDistribution(0.1*meanReturn/230, 0.2*sd/(Math.sqrt(230)));
             //change for individual stock
             double market = myGame.getDistMarket().sample();
+            System.out.println("market: " + market);
             double me = distMe.sample();
+            System.out.println("me: " + me);
             double newPrice = currentPrice*(1+market)*(1+me);
+            System.out.println(newPrice);
             setPrice(newPrice);
         }
     }
