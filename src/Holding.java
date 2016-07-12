@@ -54,7 +54,7 @@ public class Holding extends GLabel implements Runnable
     }
     
     public String toString(){
-        return ("You own: " + myQuantity + " of: " + myStock.getSymbol());
+        return ("You own: " + myQuantity + " of: " + myStock.getSymbol() + " which is worth " + myStock.getPrice()*myQuantity);
     }
 
 }
