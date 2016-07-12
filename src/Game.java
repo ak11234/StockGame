@@ -89,11 +89,8 @@ public class Game extends GraphicsProgram implements Runnable{
         User user = new User(this);
         System.out.println(user.getMyHoldings());
         int x=0;
-        
-        while(true){
-            pause(1000);
-            distMarket= new NormalDistribution(0.1/230, 0.2/(Math.sqrt(230)));
-        }
+        distMarket= new NormalDistribution(0.1/230, 0.2/(Math.sqrt(230)));
+
     }
     
     public NormalDistribution getDistMarket()

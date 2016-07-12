@@ -11,5 +11,6 @@ public class Main {
         System.out.println("Hi josh -adam");
         System.out.println("Bye Bye World");
         System.out.println(0.2/Math.sqrt(230));
+        System.out.println((1+0.0037964017645786955)*(1+0.017173779890950428)*42.308696019181696);
     }
 }

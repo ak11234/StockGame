@@ -1,5 +1,6 @@
 import acm.graphics.GLabel;
 import org.apache.commons.math3.distribution.NormalDistribution;
+import org.apache.commons.math3.util.DoubleArray;
 
 import java.text.DecimalFormat;
 
@@ -62,17 +63,23 @@ public class Stock extends GLabel implements Runnable {
         move(15, 35+(index*20));
         setLabel(toString());
         myGame.add(this);
+        NormalDistribution distMe= new NormalDistribution(0.1*meanReturn/230, 0.2*sd/(Math.sqrt(230)));
         while(true){
             pause(1000);
             
-            NormalDistribution distMe= new NormalDistribution(0.1*meanReturn/230, 0.2*sd/(Math.sqrt(230)));
+
             //change for individual stock
             double market = myGame.getDistMarket().sample();
-            System.out.println("market: " + market);
+            if (Double.isNaN(market)){
+                while (Double.isNaN(market)){
+                    market = myGame.getDistMarket().sample();
+                }
+            }
+            System.out.println(symbol + "market: " + market);
             double me = distMe.sample();
-            System.out.println("me: " + me);
+            System.out.println(symbol+ "me: " + me);
             double newPrice = currentPrice*(1+market)*(1+me);
-            System.out.println(newPrice);
+            System.out.println(symbol + newPrice);
             setPrice(newPrice);
         }
     }
