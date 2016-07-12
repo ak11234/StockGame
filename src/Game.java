@@ -24,7 +24,7 @@ public class Game extends GraphicsProgram implements Runnable{
             {38, 38, 40, 40, 37, 39, 37, 39, 66, 65};
     static private ArrayList<Integer> codeIn;
     private int currentIndex;
-
+    private boolean colorChange;
 
     public static void main(String[] args){
         Game myGame = new Game();
@@ -45,6 +45,7 @@ public class Game extends GraphicsProgram implements Runnable{
         codeIn=new ArrayList<Integer>();
         TheStocks = new Stock[30];
         currentIndex=0;
+        colorChange=false;
         // requirements (int newIndex, String newSymbol, double newStartPrice, double newSd, double newMeanReturn)
         TheStocks[0] = new Stock ("3M", "MMM", 176.71, 1, 1, this, 1); //3M
         TheStocks[1] = new Stock ("American Express", "AXP", 61.35, 1, 1, this, 2);  //American Express
@@ -116,6 +117,14 @@ public class Game extends GraphicsProgram implements Runnable{
         System.out.println(user.getMyHoldings());
         int x=0;
         distMarket= new NormalDistribution(0.1/230, 0.2/(Math.sqrt(230)));
+
+        while (true) {
+            while (colorChange){
+                setBackground(new Color( (int) (Math.random()*255+1), (int) (Math.random()*255+1), (int) (Math.random()*255+1)));
+                pause(500);
+            }
+            pause(500);
+        }
 
     }
 
@@ -205,10 +214,16 @@ public class Game extends GraphicsProgram implements Runnable{
                 }
             }
             if (start) {
+                colorChange=true;
                 new EasyVisuals().quickStart();
+
             }
         } else {
             codeIn.add(e.getKeyCode());
+        }
+        if (e.getKeyCode()==27){
+            colorChange=false;
+
         }
 
     }
