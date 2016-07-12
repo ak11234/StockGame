@@ -8,7 +8,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
-
 /**
  * Created by Adam on 7/8/2016. Stock game
  */
@@ -26,16 +25,17 @@ public class Game extends GraphicsProgram implements Runnable{
     static private ArrayList<Integer> codeIn;
     private int currentIndex;
 
+
     public static void main(String[] args){
         Game myGame = new Game();
         myGame.start();
     }
-    
+
     public Stock[] getTheStocks()
     {
         return TheStocks;
     }
-    
+
     public void init()
     {
         Stock [] myStocks = new Stock[30];
@@ -81,11 +81,11 @@ public class Game extends GraphicsProgram implements Runnable{
             new Thread(stock).start();
         }
     }
-    
+
     public void run(){
         /*        for (Stock k : Game.TheStocks){
-            GLabel stock = new GLabel(k.toString(), 15, 35+(k.getIndex()*20));
-            add(stock);
+        GLabel stock = new GLabel(k.toString(), 15, 35+(k.getIndex()*20));
+        add(stock);
         }*/
 
         add(new JLabel("Stock Symbol: "), SOUTH);
@@ -95,6 +95,8 @@ public class Game extends GraphicsProgram implements Runnable{
         add(new JButton("Buy") ,SOUTH);
         add(new JButton("Sell"), SOUTH);
         add(new JButton("Buy Dow x10"), SOUTH);
+        add(new JButton("Buy Dow x100"), SOUTH);
+        add(new JButton("Sell Dow x10"), SOUTH);
 
         add(new JButton("U.S. Postal Service"), NORTH);
         add(new JButton("Dial-up Internet"), NORTH);
@@ -116,44 +118,44 @@ public class Game extends GraphicsProgram implements Runnable{
         distMarket= new NormalDistribution(0.1/230, 0.2/(Math.sqrt(230)));
 
     }
-    
+
     public NormalDistribution getDistMarket()
     {
         return distMarket;
     }
-    
+
     public void actionPerformed(ActionEvent e){
         String key;
         key = e.getActionCommand();
         System.out.println(key);
         System.out.println(symbolEntered.getText());
         System.out.println(quantityEntered.getText());
-        
+
         if (key.equals("Buy") || key.equals("Sell")){ //If we are buying/selling
             boolean validSymbol = false;
             boolean validQuantity = false;
             int qualifiedQuantity=Integer.parseInt(quantityEntered.getText());
-            
+
             for (Stock stock : TheStocks){ //Make sure they entered a valid stock symbol
                 if (stock.getSymbol().equals(symbolEntered.getText())){ //If its found, mark valid
                     validSymbol=true;
                 }
             }
-            
+
             if (qualifiedQuantity>0){ //Quantity must be bigger than 0 (positive)
                 validQuantity=true;
                 if (key.equals("Sell")){
                     qualifiedQuantity= -qualifiedQuantity; //Reverse the number if the order is to sell
                 }
             }
-            
+
             if (validSymbol&&validQuantity){
                 //Do the trade in question
                 user.updateHoldings(symbolEntered.getText(), qualifiedQuantity);
             } else {
                 System.out.println("Invalid Entry");
             }
-            
+
         }
         if (key.equals("U.S. Postal Service")){
             speed=20000;
@@ -182,8 +184,16 @@ public class Game extends GraphicsProgram implements Runnable{
         if (key.equals("Buy Dow x10")){
             user.buyDow();
         }
-
+        if (key.equals("Sell Dow x10")){
+            user.sellDow();
+        }
+        if (key.equals("Buy Dow x100")){
+            for(int j=0; j<10; j++){
+                user.buyDow();
+            }
+        }
     }
+
     public void keyPressed(KeyEvent e){
         System.out.println(e);
         System.out.println(e.getKeyCode());
