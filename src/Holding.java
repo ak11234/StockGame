@@ -27,6 +27,7 @@ public class Holding extends GLabel implements Runnable
        update= new Holding(myQuantity+x, myStock, myGame);
        return update;
     }
+    
     public void  setQuantity(int x){
         myQuantity+=x;
     }
@@ -40,6 +41,7 @@ public class Holding extends GLabel implements Runnable
     {
         return myQuantity;
     }
+    
     public void run(){
         //practical init meathod
         setLabel(toString());
@@ -50,6 +52,7 @@ public class Holding extends GLabel implements Runnable
         }
 
     }
+    
     public String toString(){
         return ("You own: " + myQuantity + " of: " + myStock.getSymbol());
     }
