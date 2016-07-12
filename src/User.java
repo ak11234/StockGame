@@ -4,9 +4,7 @@ import javax.swing.*;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-
 import static javax.swing.SwingConstants.SOUTH;
-
 /**
  * The user class
  * 
@@ -39,15 +37,15 @@ public class User extends GLabel implements Runnable {
                 myHoldings.get(k).setQuantity(q);
 
                 //sets that holding to be the result of change quantity
-                
+
                 myCash = myCash- myGame.getTheStocks()[k].getPrice() * q;
-                
+
                 //subtracts cash
-                
+
                 return; //ends the function  
             }//the holding exists, change its quantity using the method changeQuantity
         }    
-        
+
         for(int j=0; j<myGame.getTheStocks().length; j++)
         {  //holding does not exist, creates a new one with a stock from the game's array 
             if(myGame.getTheStocks()[j].getSymbol().equals(s))
@@ -56,28 +54,34 @@ public class User extends GLabel implements Runnable {
                 h = new Holding(q, myGame.getTheStocks()[j], myGame);
                 myHoldings.add(h);
                 new Thread(h).start();
-                
+
                 //creates new holding
-                
+
                 myCash = myCash- myGame.getTheStocks()[j].getPrice() * q;
-                
+
                 //subtracts cash
-                
+
                 return;
             }
         }
     }
-    
+
+    public void buyDow(){
+        for(int s=0; s<myGame.getTheStocks().length; s++){
+            updateHoldings(myGame.getTheStocks()[s].getSymbol(), 10) ;
+        }
+    }
+
     public double getMyNetworth()
     {
         myNetworth = myCash;
         for(int k=0; k<myHoldings.size(); k++)
         {
             myNetworth = myNetworth+
-                (myHoldings.get(k).getMyStock().getPrice() * myHoldings.get(k).getQuantity());
-            
+            (myHoldings.get(k).getMyStock().getPrice() * myHoldings.get(k).getQuantity());
+
         }//sets networth
-        
+
         return myNetworth;
     }
 
@@ -90,13 +94,14 @@ public class User extends GLabel implements Runnable {
     {
         return myHoldings;
     }
-    
+
     public String toString(){
         String result = "";
         result+="Your cash: "+ new DecimalFormat("#.##").format(myCash) + "\t    ";
         result+="Your Net Worth: "+ new DecimalFormat("#.##").format(getMyNetworth());
         return result;
     }
+
     public void run(){
         move(800, 50);
         setLabel(toString());

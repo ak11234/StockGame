@@ -86,7 +86,8 @@ public class Game extends GraphicsProgram implements Runnable{
         add(quantityEntered, SOUTH);
         add(new JButton("Buy") ,SOUTH);
         add(new JButton("Sell"), SOUTH);
-
+        add(new JButton("Buy Dow x10"), SOUTH);
+        
         add(new JButton("U.S. Postal Service"), NORTH);
         add(new JButton("Dial-up Internet"), NORTH);
         add(new JButton("Toyota Prius"), NORTH);
@@ -169,5 +170,9 @@ public class Game extends GraphicsProgram implements Runnable{
             speed=500;
             speedLabel.setText(key);
         }
+        if (key.equals("Buy Dow x10")){
+            user.buyDow();
+        }
+        
     }
 }
