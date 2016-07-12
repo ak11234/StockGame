@@ -64,9 +64,9 @@ public class Stock extends GLabel implements Runnable {
             pause(6000);
             
             NormalDistribution distMe= new NormalDistribution(0.1*meanReturn/230, 0.2*sd/(Math.sqrt(230)));
-            //change for individual stock 
-            double market = Double.parseDouble(myGame.getDistMarket().toString());
-            double me = Double.parseDouble(distMe.toString());
+            //change for individual stock
+            double market = myGame.getDistMarket().sample();
+            double me = distMe.sample();
             double newPrice = currentPrice*(1+market)*(1+me);
             setPrice(newPrice);
         }

@@ -5,7 +5,7 @@ import javax.swing.*;
 /**
  * Write a description of class Holdings here.
  * 
- * @Josh 
+ * @Josh and Adam
  */
 public class Holding extends GLabel implements Runnable
 {
