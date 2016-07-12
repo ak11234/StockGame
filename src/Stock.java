@@ -15,6 +15,7 @@ public class Stock extends GLabel implements Runnable {
     private double startPrice, changePrice, changePercent, currentPrice;
     private Game myGame;
     private int x, y;
+    private String didGrow="^";
 
     //constructor
     public Stock(int newIndex, String newSymbol, double newStartPrice, double newSd, double newMeanReturn, Game g){
@@ -36,7 +37,7 @@ public class Stock extends GLabel implements Runnable {
     }
 
     public String toString(){
-        return ("Symbol: " + symbol + "\t   Current Price: " + new DecimalFormat("#.##").format(currentPrice));
+        return ("Symbol: " + symbol + "\t   Current Price: " + new DecimalFormat("#.##").format(currentPrice)) +didGrow;
     }
 
     public int getIndex(){
@@ -77,6 +78,12 @@ public class Stock extends GLabel implements Runnable {
             }
             double me = distMe.sample();
             double newPrice = currentPrice*(1+market)*(1+me);
+            if(newPrice-currentPrice>=0){
+                didGrow="^";
+            }
+            else{
+                didGrow="V";
+            }
             setPrice(newPrice);
         }
     }
