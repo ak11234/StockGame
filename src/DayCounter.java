@@ -1,9 +1,8 @@
 import acm.graphics.GLabel;
 /**
- * Write a description of class DayCounter here.
+ * This class counts the number of trading days (230/year) that have passed so far. 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Josh
  */
 public class DayCounter extends GLabel implements Runnable 
 {

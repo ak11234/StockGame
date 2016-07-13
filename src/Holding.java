@@ -4,7 +4,9 @@ import javax.swing.*;
 import java.text.DecimalFormat;
 
 /**
- * Write a description of class Holdings here.
+ * The Holdings class keeps track of how many of each stock
+ * the user owns, along with other important personal stock
+ * information.
  * 
  * @Josh and Adam
  */

@@ -9,7 +9,8 @@ import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
 /**
- * Created by Adam on 7/8/2016. Stock game
+ * Created by Adam on 7/8/2016. 
+ * This is the main meathod being run, which manages all other classes. 
  */
 public class Game extends GraphicsProgram implements Runnable{ 
     public static Stock[] TheStocks;
