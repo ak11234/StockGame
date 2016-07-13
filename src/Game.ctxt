@@ -17,4 +17,6 @@ comment7.params=e
 comment7.target=void\ actionPerformed(java.awt.event.ActionEvent)
 comment8.params=e
 comment8.target=void\ keyPressed(java.awt.event.KeyEvent)
-numComments=9
+comment9.params=symbolMatch
+comment9.target=Stock\ getStockMatch(java.lang.String)
+numComments=10
