@@ -19,13 +19,13 @@ public class NewsStory
         company = new String[30];
         effect = new String[13];
 
-        position[0]="Communications Department";
+        position[0]="Junior President";
         position[1]="CEO";
         position[2]="CFO";
         position[3]="HR Department";
         position[4]="Research Department";
         position[5]="Sales Manager";
-        position[6]="Chief Sail Sales Advisor";
+        position[6]="Sail Sales Advisor";
         position[7]="President";
         position[8]="Board of Directors";
         position[9]="Vice President";
@@ -64,7 +64,7 @@ public class NewsStory
         effect[1]="committed first degree murder.";
         effect[2]="been accused of the kidnap of Santa Claus.";
         effect[3]="released a new hit single.";
-        effect[4]="been stealing recources in Settlers of Catan.";
+        effect[4]="stolen recources in Settlers of Catan.";
         effect[5]="downloaded free RAM from 4Chan.";
         effect[6]="joined the church of Scientology.";
         effect[7]="was run over by a heard of Pokemon Go! adicts.";
