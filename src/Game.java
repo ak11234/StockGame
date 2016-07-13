@@ -207,14 +207,35 @@ public class Game extends GraphicsProgram implements Runnable{
             speedLabel.setText(key);
         }
         if (key.equals("Buy Dow x10")){
-            user.buyDow();
+            int n = JOptionPane.showConfirmDialog(
+                    null,
+                    "Place order to BUY 10 of all securities in the Dow Jones Index?",
+                    "Order Confirmation",
+                    JOptionPane.YES_NO_OPTION);
+            if (n==YES_OPTION){
+                user.buyDow();
+            }
         }
         if (key.equals("Sell Dow x10")){
-            user.sellDow();
+            int n = JOptionPane.showConfirmDialog(
+                    null,
+                    "Place order to SELL 10 of all securities in the Dow Jones Index?",
+                    "Order Confirmation",
+                    JOptionPane.YES_NO_OPTION);
+            if (n==YES_OPTION){
+                user.sellDow();
+            }
         }
         if (key.equals("Buy Dow x100")){
-            for(int j=0; j<10; j++){
-                user.buyDow();
+            int n = JOptionPane.showConfirmDialog(
+                    null,
+                    "Place order to BUY 100 of all securities in the Dow Jones Index?",
+                    "Order Confirmation",
+                    JOptionPane.YES_NO_OPTION);
+            if (n==YES_OPTION) {
+                for (int j = 0; j < 10; j++) {
+                    user.buyDow();
+                }
             }
         }
     }
