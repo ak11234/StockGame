@@ -52,11 +52,12 @@ public class Holding extends GLabel implements Runnable
         setLabel(toString());
         myGame.add(this);
         while (myGame.getGameOn()){
-            setLabel(toString());
-            pause(500);
             if(myQuantity<0){
                 myGame.setGameOver();
             }
+            setLabel(toString());
+            pause(500);
+            
         }
         
     }
