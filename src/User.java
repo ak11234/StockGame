@@ -16,7 +16,7 @@ public class User extends GLabel implements Runnable {
     private ArrayList<Holding> myHoldings;
     private Game myGame;
     public boolean gameOver=false;
-
+    
     public User(Game g)
     {
         super("", 0, 0);
@@ -105,7 +105,7 @@ public class User extends GLabel implements Runnable {
     public String toString(){
         String result = "";
       
-        result+="Your cash: "+ new DecimalFormat("#.##").format(myCash) + "\t    ";
+        result+=" Your cash: "+ new DecimalFormat("#.##").format(myCash) + "\t    ";
             result+="Your Net Worth: "+ new DecimalFormat("#.##").format(getMyNetworth());
         
         return result;
