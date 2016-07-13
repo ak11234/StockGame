@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c03628da-c405-4229-9b7f-d1ca87ca7242" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/NewsLoop.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StockGame/package.bluej" afterPath="$PROJECT_DIR$/out/production/StockGame/package.bluej" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DayCounter.java" afterPath="$PROJECT_DIR$/src/DayCounter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game.java" afterPath="$PROJECT_DIR$/src/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/News.java" afterPath="$PROJECT_DIR$/src/News.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Stock.java" afterPath="$PROJECT_DIR$/src/Stock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/User.java" afterPath="$PROJECT_DIR$/src/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/NewsLoop.java" afterPath="$PROJECT_DIR$/src/NewsLoop.java" />
     </list>
     <ignored path="StockGame.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,20 +56,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewsLoop.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="NewsLoop.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/NewsLoop.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+              <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="News.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="News.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/News.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
+            <state relative-caret-position="357">
               <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -160,8 +154,8 @@
         <option value="$PROJECT_DIR$/src/User.java" />
         <option value="$PROJECT_DIR$/src/Stock.java" />
         <option value="$PROJECT_DIR$/src/Game.java" />
-        <option value="$PROJECT_DIR$/src/NewsLoop.java" />
         <option value="$PROJECT_DIR$/src/News.java" />
+        <option value="$PROJECT_DIR$/src/NewsLoop.java" />
       </list>
     </option>
   </component>
@@ -832,7 +826,7 @@
       <updated>1468426623501</updated>
       <workItem from="1468426629012" duration="181000" />
       <workItem from="1468426832618" duration="436000" />
-      <workItem from="1468427548755" duration="9260000" />
+      <workItem from="1468427548755" duration="9353000" />
     </task>
     <task id="LOCAL-00001" summary="please work dammit">
       <created>1468426898417</created>
@@ -869,11 +863,18 @@
       <option name="project" value="LOCAL" />
       <updated>1468441599075</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="news box works">
+      <created>1468444248603</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1468444248603</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9877000" />
+    <option name="totallyTimeSpent" value="9970000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="775" extended-state="0" />
@@ -923,7 +924,8 @@
     <MESSAGE value="more news" />
     <MESSAGE value="news works" />
     <MESSAGE value="josh keeps asking me" />
-    <option name="LAST_COMMIT_MESSAGE" value="josh keeps asking me" />
+    <MESSAGE value="news box works" />
+    <option name="LAST_COMMIT_MESSAGE" value="news box works" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1158,21 +1160,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/NewsLoop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/News.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
+        <state relative-caret-position="357">
           <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NewsLoop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>

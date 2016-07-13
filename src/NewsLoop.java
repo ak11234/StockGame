@@ -16,7 +16,7 @@ public class NewsLoop implements Runnable {
     public void run(){
         while (myGame.getGameOn()){
             myNews.add(myNewStory.newNewsStory());
-            pause(500);
+            pause(10000);
         }
     }
 }
