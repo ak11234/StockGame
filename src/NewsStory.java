@@ -69,7 +69,7 @@ public class NewsStory
         effect[6]="joined the church of Scientology.";
         effect[7]="begun research in cookie production.";
         effect[8]="died in a tragic golfing accident.";
-        effect[9]="gone missing in Kazakhstan";
+        effect[9]="gone missing in Kazakhstan.";
     }
 
     public String newNewsStory()
