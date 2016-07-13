@@ -6,9 +6,10 @@ import java.util.ArrayList;
 
 import static javax.swing.SwingConstants.SOUTH;
 /**
- * The user class
+ * The user class manages all of the user's personal information, including holdings. It also 
+ * manages the many of the button meathods. 
  * 
- * @author (Josh Gross) 
+ * @Josh Gross 
  */
 public class User extends GLabel implements Runnable {
     private double myNetworth;

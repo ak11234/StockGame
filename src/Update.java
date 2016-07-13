@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import static acm.util.JTFTools.pause;
 
 /**
- * Created by Adam on 7/8/2016. To update
+ * Created by Adam on 7/8/2016. This class updates the Array list of stock labels. 
  */
 public class Update implements Runnable {
     private Game myGame;
