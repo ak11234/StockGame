@@ -118,9 +118,10 @@ public class Game extends GraphicsProgram implements Runnable{
         speedLabel = new JLabel("Light Speed");
         add(speedLabel, NORTH);
 
-        theNews = new News(450, 35, 10, this);
-        theNews.add("hello");
-        theNews.add("world");
+        theNews = new News(300, 200, 10, this);
+        NewsStory newsStory = new NewsStory();
+        theNews.add(newsStory.newNewsStory());
+        theNews.add(newsStory.newNewsStory());
 
         addActionListeners();
         addKeyListeners();
