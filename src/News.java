@@ -22,7 +22,7 @@ public class News {
             myLabels.add(new GLabel("", myX, myY+20*k));
             myGame.add(myLabels.get(k));
         }
-        
+
         position = new String[10];
         company = new String[30];
         effect = new String[10];
@@ -67,6 +67,12 @@ public class News {
         company[27]="Home Depot";
         company[28]="Goldman Sachs";
         company[29]="Procter & Gamble";
+
+        company[0]="committed armed robbery.";
+        company[1]="committed first degree murder.";
+        company[2]="been accused of the kidnap and torture of Santa Claus.";
+        company[3]="released a new hit single.";
+        company[4]="been captured by the Canadian mafia.";
     }
 
     public void add(String text){
@@ -76,7 +82,6 @@ public class News {
             temp1.setLabel(temp2.getLabel());
         }
         myLabels.get(0).setLabel(text);
-       
 
         
     }
