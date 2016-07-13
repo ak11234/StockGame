@@ -8,7 +8,7 @@
 public class NewsStory
 {
     
-     private static String[] position, company, effect;
+     private String[] position, company, effect;
 
     /**
      * Constructor for objects of class NewsStory
@@ -64,15 +64,15 @@ public class NewsStory
         effect[1]="committed first degree murder.";
         effect[2]="been accused of the kidnap and torture of Santa Claus.";
         effect[3]="released a new hit single.";
-        effect[4]="released a new hit single.";
-        effect[5]="released a new hit single.";
-        effect[6]="released a new hit single.";
-        effect[7]="released a new hit single.";
+        effect[4]="been caught stealing recources in Settlers of Catan.";
+        effect[5]="downloaded free RAM from a website connected to 4Chan.";
+        effect[6]="joined the church of Scientology.";
+        effect[7]="begun research in cookie production.";
         effect[8]="died in a tragic golfing accident.";
         effect[9]="gone missing in Kazakhstan";
     }
 
-    public static String newNewsStory()
+    public String newNewsStory()
     {
         return "The "+position[(int)(Math.random()*10)]+" of "+company[(int)(Math.random()*30)]+
                " has "+effect[(int)(Math.random()*10)];
