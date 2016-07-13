@@ -51,15 +51,24 @@ public class Holding extends GLabel implements Runnable
         //practical init meathod
         setLabel(toString());
         myGame.add(this);
-        while (true){
+        while (myGame.getGameOn()){
             setLabel(toString());
             pause(500);
+            if(myQuantity<0){
+                myGame.setGameOver();
+            }
         }
-
+        
     }
     
     public String toString(){
-        return ("You own: " + myQuantity + " of: " + myStock.getSymbol() + " which is worth " +new DecimalFormat("#.##").format(myStock.getPrice()*myQuantity) + " It was purchased at:  " + new DecimalFormat("#.##").format(buyPrice));
-    }
+        if(myGame.getGameOn()){
+           return ("You own: " + myQuantity + " of: " + myStock.getSymbol() + " which is worth " +new DecimalFormat("#.##").format(myStock.getPrice()*myQuantity) + " It was purchased at:  " + new DecimalFormat("#.##").format(buyPrice));
+        }
+        else{
+            return "GAME OVER!";
+        }
+        
+         }
 
 }

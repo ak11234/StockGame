@@ -17,7 +17,7 @@ public class User extends GLabel implements Runnable {
     private ArrayList<Holding> myHoldings;
     private Game myGame;
     public boolean gameOver=false;
-    
+
     public User(Game g)
     {
         super("", 0, 0);
@@ -104,19 +104,24 @@ public class User extends GLabel implements Runnable {
     }
 
     public String toString(){
-        String result = "";
-      
-        result+=" Your cash: "+ new DecimalFormat("#.##").format(myCash) + "\t    ";
-            result+="Your Net Worth: "+ new DecimalFormat("#.##").format(getMyNetworth());
-        
-        return result;
-    }
+        if(myGame.getGameOn()){
+            String result = "";
 
+            result+="Your cash: "+ new DecimalFormat("#.##").format(myCash) + "\t    ";
+            result+="Your Net Worth: "+ new DecimalFormat("#.##").format(getMyNetworth());
+
+            return result;
+        }
+        else{
+            return "GAME OVER!";
+        }
+
+    }
     public void run(){
         move(800, 50);
         setLabel(toString());
         myGame.add(this);
-        while (true){
+        while (myGame.getGameOn()){
             for (int k=0; k<myHoldings.size(); k++){
                 if (myHoldings.get(k).getQuantity()<1){
                     myHoldings.get(k).setVisible(false);
@@ -130,7 +135,7 @@ public class User extends GLabel implements Runnable {
             setLabel(toString());
             pause(500);
             if(myCash<=0){
-                gameOver=true;
+                myGame.setGameOver();
             }
         }
     }

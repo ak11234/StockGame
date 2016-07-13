@@ -16,7 +16,12 @@ public class DayCounter extends GLabel implements Runnable
     }
 
     public String toString(){
-        return "Days so far: "+Days;
+        if(myGame.getGameOn()){
+            return "Days so far: "+Days;
+        }
+        else{
+            return "GAME OVER!";
+        }
     }
 
     public void run(){
@@ -24,7 +29,7 @@ public class DayCounter extends GLabel implements Runnable
             myGame.add(this);
             move(800, 30);
             setLabel(toString());
-            while(true){
+            while(myGame.getGameOn()){
                 pause(myGame.speed);
                 Days++;
                 setLabel(toString());

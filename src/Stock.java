@@ -43,7 +43,14 @@ public class Stock extends GLabel implements Runnable {
     }
 
     public String toString(){
-        return (name+":" + symbol + "\t   Current Price: " + new DecimalFormat("#.##").format(currentPrice)) +"   "+didGrow;
+        
+        if(myGame.getGameOn()){
+             return (name+":" + symbol + "\t   Current Price: " + new DecimalFormat("#.##").format(currentPrice)) +"   "+didGrow;
+        }
+        else{
+            return "GAME OVER!";
+        }
+        
     }
 
     public String getName(){
@@ -71,7 +78,7 @@ public class Stock extends GLabel implements Runnable {
         setLabel(toString());
         myGame.add(this);
         NormalDistribution distMe= new NormalDistribution(0.1*meanReturn/230, 0.2*sd/(Math.sqrt(230)));
-        while(true){
+        while(myGame.getGameOn()){
             pause(myGame.speed);
             
 

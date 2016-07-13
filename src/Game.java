@@ -29,6 +29,7 @@ public class Game extends GraphicsProgram implements Runnable{
     static private ArrayList<Integer> codeIn;
     private int currentIndex;
     private boolean colorChange;
+    private boolean gameOn=true;
 
     public static void main(String[] args){
         Game myGame = new Game();
@@ -125,7 +126,7 @@ public class Game extends GraphicsProgram implements Runnable{
         int x=0;
         distMarket= new NormalDistribution(0.1/230, 0.2/(Math.sqrt(230)));
 
-        while (true) {
+        while (gameOn) {
             while (colorChange){
                 setBackground(new Color( (int) (Math.random()*255+1), (int) (Math.random()*255+1), (int) (Math.random()*255+1)));
                 pause(500);
@@ -140,6 +141,14 @@ public class Game extends GraphicsProgram implements Runnable{
         return distMarket;
     }
 
+    public boolean getGameOn(){
+        return gameOn;
+    }
+    
+    public void setGameOver(){
+        gameOn=false;
+    }
+    
     public void actionPerformed(ActionEvent e){
         String key;
         key = e.getActionCommand();

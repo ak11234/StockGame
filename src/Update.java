@@ -23,7 +23,7 @@ public class Update implements Runnable {
             myGame.add(myGame.stockLabels.get(k));
         }
         int temp=5;
-        while (true){
+        while (myGame.getGameOn()){
             temp++;
             for (Stock k : Game.TheStocks){
                myGame.stockLabels.set(k.getIndex(), (new GLabel(k.toString(), 15, 35+(k.getIndex()*20))));
