@@ -55,16 +55,16 @@ public class Game extends GraphicsProgram implements Runnable{
         daysSoFar = new DayCounter(this);
         new Thread(daysSoFar).start();
         
-        TheStocks[0] = new Stock ("3M", "MMM", 176.71, .1, .1, this, 1); //3M
+        TheStocks[0] = new Stock ("3M", "MMM", 176.71, 1, 1, this, 1); //3M
         TheStocks[1] = new Stock ("American Express", "AXP", 61.35, 2, 2, this, 2);  //American Express
-        TheStocks[2] = new Stock ("Apple", "AAPL", 96.64, .5, .5, this, 3); //Apple
+        TheStocks[2] = new Stock ("Apple", "AAPL", 96.64, 1.2, 1.2, this, 3); //Apple
         TheStocks[3] = new Stock ("Boeing", "BA", 129.93, 1.6, 1.6, this, 4);  //Boeing
         TheStocks[4] = new Stock ("Caterpillar", "CAT", 77.06, 2, 2, this, 5);  //Caterpillar
         TheStocks[5] = new Stock ("Chevron", "CVX", 104.45, 3, 3, this, 6); //Chevron
         TheStocks[6] = new Stock ("Cisco", "CSCO", 29.3, 1.9, 1.9, this, 7);  //Cisco
         TheStocks[7] = new Stock ("Coca-Cola", "KO", 45.33, .9, .9, this, 8);   //Coca-Cola
         TheStocks[8] = new Stock ("Disney", "DIS", 99.52, 2.3, 2.3, this, 9);  //Disney
-        TheStocks[9] = new Stock ("E I du Pont de Nemours and Co", "DD", 63.52, .1, .1, this, 10);   //E I du Pont de Nemours and Co
+        TheStocks[9] = new Stock ("E I du Pont de Nemours and Co", "DD", 63.52, 1, 1, this, 10);   //E I du Pont de Nemours and Co
         TheStocks[10]= new Stock ("Exxon Mobil", "XOM", 93.47, 2, 2, this, 11); //Exxon Mobil
         TheStocks[11]= new Stock ("General Electric", "GE", 32.19, 2, 2, this, 12);  //General Electric
         TheStocks[12]= new Stock ("Goldman Sachs", "GS", 150.66, .5, .5, this, 13); //Goldman Sachs
