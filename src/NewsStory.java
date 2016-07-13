@@ -17,7 +17,7 @@ public class NewsStory
     {
         position = new String[10];
         company = new String[30];
-        effect = new String[10];
+        effect = new String[13];
 
         position[0]="Communications Department";
         position[1]="CEO";
@@ -67,14 +67,17 @@ public class NewsStory
         effect[4]="been stealing recources in Settlers of Catan.";
         effect[5]="downloaded free RAM from 4Chan.";
         effect[6]="joined the church of Scientology.";
-        effect[7]="was run over by Pokemon Go! adicts.";
+        effect[7]="was run over by a heard of Pokemon Go! adicts.";
         effect[8]="died in a tragic golfing accident.";
         effect[9]="gone missing in Kazakhstan.";
+        effect[10]="failed to submit a tax statement.";
+        effect[11]="is under investigation by the FBI.";
+        effect[12]="been sued for illegal experiments on employees.";
     }
 
     public String newNewsStory()
     {
         return "The "+position[(int)(Math.random()*10)]+" of "+company[(int)(Math.random()*30)]+
-               " has "+effect[(int)(Math.random()*10)];
+               " has "+effect[(int)(Math.random()*14)];
     }
 }
