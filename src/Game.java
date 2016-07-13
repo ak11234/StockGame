@@ -109,7 +109,7 @@ public class Game extends GraphicsProgram implements Runnable{
 
         add(new JButton("U.S. Postal Service"), NORTH);
         add(new JButton("Dial-up Internet"), NORTH);
-        add(new JButton("Mac osX Speed"), NORTH);
+        add(new JButton("BubbleSort"), NORTH);
         add(new JButton("Light Speed"), NORTH);
         add(new JButton("Ridiculous Speed"), NORTH);
         add(new JButton("Ludicrous Speed"), NORTH);
@@ -203,7 +203,7 @@ public class Game extends GraphicsProgram implements Runnable{
             speed=10000;
             speedLabel.setText(key);
         }
-        if (key.equals("Mac osX Speed")){
+        if (key.equals("BubbleSort")){
             speed=8000;
             speedLabel.setText(key);
         }
