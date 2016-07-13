@@ -22,17 +22,7 @@ public class News {
             myLabels.add(new GLabel("", myX, myY+20*k));
             myGame.add(myLabels.get(k));
         }
-    }
-
-    public void add(String text){
-        for (int k = myAmt-1 ; k>0 ; k--){
-            GLabel temp1 =myLabels.get(k);
-            GLabel temp2 = myLabels.get(k-1);
-            temp1.setLabel(temp2.getLabel());
-        }
-        myLabels.get(0).setLabel(text);
-        add(new GLabel("Hello"),500,300);
-
+        
         position = new String[10];
         company = new String[30];
         effect = new String[10];
@@ -77,5 +67,17 @@ public class News {
         company[0]="Home Depot";
         company[0]="Goldman Sachs";
         company[0]="Procter & Gamble";
+    }
+
+    public void add(String text){
+        for (int k = myAmt-1 ; k>0 ; k--){
+            GLabel temp1 =myLabels.get(k);
+            GLabel temp2 = myLabels.get(k-1);
+            temp1.setLabel(temp2.getLabel());
+        }
+        myLabels.get(0).setLabel(text);
+       
+
+        
     }
 }
