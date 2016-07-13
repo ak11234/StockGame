@@ -25,7 +25,7 @@ public class NewsStory
         position[3]="HR Department";
         position[4]="Research Department";
         position[5]="Sales Manager";
-        position[6]="Chief Sales Advisor";
+        position[6]="Chief Sail Sales Advisor";
         position[7]="President";
         position[8]="Board of Directors";
         position[9]="Vice President";
