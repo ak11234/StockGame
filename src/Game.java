@@ -6,7 +6,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
+
+import static javax.swing.JOptionPane.YES_OPTION;
 
 /**
  * Created by Adam on 7/8/2016. Stock game
@@ -163,7 +166,16 @@ public class Game extends GraphicsProgram implements Runnable{
 
             if (validSymbol&&validQuantity){
                 //Do the trade in question
-                user.updateHoldings(symbolEntered.getText(), qualifiedQuantity);
+                int n = JOptionPane.showConfirmDialog(
+                        null,
+                        "Place Order For: \n" + qualifiedQuantity + " of: " + symbolEntered.getText() + "?"
+                        + "\n This will cost:  $" + new DecimalFormat("#.##").format(getStockMatch(symbolEntered.getText()).getPrice()*qualifiedQuantity)
+                        +" \n and will bring you cash down to: $" + new DecimalFormat("#.##").format(((int)(user.getMyCash())-getStockMatch(symbolEntered.getText()).getPrice()*qualifiedQuantity)),
+                        "Order Confirmation",
+                        JOptionPane.YES_NO_OPTION);
+                if (n==YES_OPTION){
+                    user.updateHoldings(symbolEntered.getText(), qualifiedQuantity);
+                }
             } else {
                 System.out.println("Invalid Entry");
             }
@@ -229,5 +241,13 @@ public class Game extends GraphicsProgram implements Runnable{
 
         }
 
+    }
+    public Stock getStockMatch(String symbolMatch){
+        for (Stock s : TheStocks){
+            if (s.getSymbol().equals(symbolMatch)){
+                return s;
+            }
+        }
+        return null;
     }
    }
