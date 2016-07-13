@@ -27,7 +27,7 @@ public class DayCounter extends GLabel implements Runnable
     public void run(){
         {
             myGame.add(this);
-            move(900, 20);
+            move(940, 20);
             setLabel(toString());
             while(myGame.getGameOn()){
                 pause(myGame.speed);

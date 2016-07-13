@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c03628da-c405-4229-9b7f-d1ca87ca7242" name="Default" comment="">
+    <list default="true" id="c03628da-c405-4229-9b7f-d1ca87ca7242" name="Default" comment="changed new timing">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/NewsLoop.java" afterPath="$PROJECT_DIR$/src/NewsLoop.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StockGame/package.bluej" afterPath="$PROJECT_DIR$/out/production/StockGame/package.bluej" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DayCounter.java" afterPath="$PROJECT_DIR$/src/DayCounter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game.java" afterPath="$PROJECT_DIR$/src/Game.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/News.java" afterPath="$PROJECT_DIR$/src/News.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/User.java" afterPath="$PROJECT_DIR$/src/User.java" />
     </list>
     <ignored path="StockGame.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,21 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-93">
-              <caret line="120" column="39" selection-start-line="120" selection-start-column="39" selection-end-line="120" selection-end-column="39" />
+            <state relative-caret-position="111">
+              <caret line="120" column="30" selection-start-line="120" selection-start-column="30" selection-end-line="120" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1196#1197#0" expanded="true" />
@@ -56,7 +50,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewsLoop.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NewsLoop.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/NewsLoop.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
@@ -69,11 +63,9 @@
       <file leaf-file-name="News.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/News.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-34">
+              <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -91,7 +83,7 @@
       <file leaf-file-name="Holding.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Holding.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
+            <state relative-caret-position="323">
               <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
               <folding />
             </state>
@@ -111,8 +103,8 @@
       <file leaf-file-name="DayCounter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DayCounter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+            <state relative-caret-position="156">
+              <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -121,8 +113,8 @@
       <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="127" column="53" selection-start-line="127" selection-start-column="53" selection-end-line="127" selection-end-column="53" />
+            <state relative-caret-position="112">
+              <caret line="120" column="16" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -150,12 +142,12 @@
       <list>
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/NewsStory.java" />
-        <option value="$PROJECT_DIR$/src/DayCounter.java" />
-        <option value="$PROJECT_DIR$/src/User.java" />
         <option value="$PROJECT_DIR$/src/Stock.java" />
-        <option value="$PROJECT_DIR$/src/Game.java" />
-        <option value="$PROJECT_DIR$/src/News.java" />
         <option value="$PROJECT_DIR$/src/NewsLoop.java" />
+        <option value="$PROJECT_DIR$/src/News.java" />
+        <option value="$PROJECT_DIR$/src/User.java" />
+        <option value="$PROJECT_DIR$/src/DayCounter.java" />
+        <option value="$PROJECT_DIR$/src/Game.java" />
       </list>
     </option>
   </component>
@@ -252,8 +244,10 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Game.class</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/NewsStory.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/package.bluej</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Stock.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/User.class</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -826,7 +820,7 @@
       <updated>1468426623501</updated>
       <workItem from="1468426629012" duration="181000" />
       <workItem from="1468426832618" duration="436000" />
-      <workItem from="1468427548755" duration="9353000" />
+      <workItem from="1468427548755" duration="9674000" />
     </task>
     <task id="LOCAL-00001" summary="please work dammit">
       <created>1468426898417</created>
@@ -870,11 +864,18 @@
       <option name="project" value="LOCAL" />
       <updated>1468444248603</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="changed new timing">
+      <created>1468444336145</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1468444336145</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9970000" />
+    <option name="totallyTimeSpent" value="10291000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="775" extended-state="0" />
@@ -925,7 +926,8 @@
     <MESSAGE value="news works" />
     <MESSAGE value="josh keeps asking me" />
     <MESSAGE value="news box works" />
-    <option name="LAST_COMMIT_MESSAGE" value="news box works" />
+    <MESSAGE value="changed new timing" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed new timing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1110,30 +1112,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="127" column="53" selection-start-line="127" selection-start-column="53" selection-end-line="127" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Holding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DayCounter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Stock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
@@ -1142,10 +1120,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Holding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="120" column="16" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DayCounter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/News.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NewsLoop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-93">
-          <caret line="120" column="39" selection-start-line="120" selection-start-column="39" selection-end-line="120" selection-end-column="39" />
+        <state relative-caret-position="111">
+          <caret line="120" column="30" selection-start-line="120" selection-start-column="30" selection-end-line="120" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1196#1197#0" expanded="true" />
@@ -1157,24 +1175,6 @@
             <element signature="e#6561#6562#0" expanded="true" />
             <element signature="e#6589#6590#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/News.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/NewsLoop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>

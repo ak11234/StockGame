@@ -1,6 +1,5 @@
 import acm.graphics.GLabel;
 import acm.graphics.GRect;
-import acm.program.GraphicsProgram;
 
 import java.util.ArrayList;
 
