@@ -58,15 +58,15 @@ public class News {
         company[18]="Disney";
         company[19]="Wal-Mart";
         company[20]="Travelers";
-        company[0]="UnitedHealth";
-        company[0]="ExxonMobil";
-        company[0]="Verizon";
-        company[0]="Visa";
-        company[0]="United Technologies";
-        company[0]="General Electric";
-        company[0]="Home Depot";
-        company[0]="Goldman Sachs";
-        company[0]="Procter & Gamble";
+        company[21]="UnitedHealth";
+        company[22]="ExxonMobil";
+        company[23]="Verizon";
+        company[24]="Visa";
+        company[25]="United Technologies";
+        company[26]="General Electric";
+        company[27]="Home Depot";
+        company[28]="Goldman Sachs";
+        company[29]="Procter & Gamble";
     }
 
     public void add(String text){
