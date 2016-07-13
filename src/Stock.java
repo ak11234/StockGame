@@ -74,7 +74,7 @@ public class Stock extends GLabel implements Runnable {
     //changes the price of the stocks
     public void run() {
         //practical init meathod
-        move(15, 35+(index*20));
+        move(15, 20+(index*20));
         setLabel(toString());
         myGame.add(this);
         NormalDistribution distMe= new NormalDistribution(0, 0.2*sd/(Math.sqrt(230)));

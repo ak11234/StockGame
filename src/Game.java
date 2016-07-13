@@ -64,7 +64,7 @@ public class Game extends GraphicsProgram implements Runnable{
         TheStocks[6] = new Stock ("Cisco", "CSCO", 29.3, 1.9, 1.9, this, 7);  //Cisco
         TheStocks[7] = new Stock ("Coca-Cola", "KO", 45.33, .9, .9, this, 8);   //Coca-Cola
         TheStocks[8] = new Stock ("Disney", "DIS", 99.52, 2.3, 2.3, this, 9);  //Disney
-        TheStocks[9] = new Stock ("E I du Pont de Nemours and Co", "DD", 63.52, 1, 1, this, 10);   //E I du Pont de Nemours and Co
+        TheStocks[9] = new Stock ("du Pont de Nemours and Co", "DD", 63.52, 1, 1, this, 10);   //E I du Pont de Nemours and Co
         TheStocks[10]= new Stock ("Exxon Mobil", "XOM", 93.47, 2, 2, this, 11); //Exxon Mobil
         TheStocks[11]= new Stock ("General Electric", "GE", 32.19, 2, 2, this, 12);  //General Electric
         TheStocks[12]= new Stock ("Goldman Sachs", "GS", 150.66, .5, .5, this, 13); //Goldman Sachs
@@ -118,10 +118,10 @@ public class Game extends GraphicsProgram implements Runnable{
         speedLabel = new JLabel("Light Speed");
         add(speedLabel, NORTH);
 
-        theNews = new News(300, 200, 10, this);
+        theNews = new News(340, 150, 20, this);
         NewsStory newsStory = new NewsStory();
-        theNews.add(newsStory.newNewsStory());
-        theNews.add(newsStory.newNewsStory());
+        NewsLoop newsLoop = new NewsLoop(theNews, newsStory, this);
+        new Thread(newsLoop).start();
 
         addActionListeners();
         addKeyListeners();
