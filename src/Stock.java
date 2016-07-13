@@ -77,7 +77,7 @@ public class Stock extends GLabel implements Runnable {
         move(15, 35+(index*20));
         setLabel(toString());
         myGame.add(this);
-        NormalDistribution distMe= new NormalDistribution(0.1*meanReturn/230, 0.2*sd/(Math.sqrt(230)));
+        NormalDistribution distMe= new NormalDistribution(0, 0.2*sd/(Math.sqrt(230)));
         while(myGame.getGameOn()){
             pause(myGame.speed);
             
