@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c03628da-c405-4229-9b7f-d1ca87ca7242" name="Default" comment="changed new timing">
+    <list default="true" id="c03628da-c405-4229-9b7f-d1ca87ca7242" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StockGame/package.bluej" afterPath="$PROJECT_DIR$/out/production/StockGame/package.bluej" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DayCounter.java" afterPath="$PROJECT_DIR$/src/DayCounter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game.java" afterPath="$PROJECT_DIR$/src/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/News.java" afterPath="$PROJECT_DIR$/src/News.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/User.java" afterPath="$PROJECT_DIR$/src/User.java" />
     </list>
     <ignored path="StockGame.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,18 +29,18 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="120" column="30" selection-start-line="120" selection-start-column="30" selection-end-line="120" selection-end-column="30" />
+            <state relative-caret-position="196">
+              <caret line="125" column="40" selection-start-line="125" selection-start-column="40" selection-end-line="125" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1196#1197#0" expanded="true" />
                 <element signature="e#1228#1229#0" expanded="true" />
-                <element signature="e#6430#6431#0" expanded="true" />
-                <element signature="e#6463#6464#0" expanded="true" />
-                <element signature="e#6496#6497#0" expanded="true" />
-                <element signature="e#6525#6526#0" expanded="true" />
-                <element signature="e#6561#6562#0" expanded="true" />
-                <element signature="e#6589#6590#0" expanded="true" />
+                <element signature="e#6486#6487#0" expanded="true" />
+                <element signature="e#6519#6520#0" expanded="true" />
+                <element signature="e#6552#6553#0" expanded="true" />
+                <element signature="e#6581#6582#0" expanded="true" />
+                <element signature="e#6617#6618#0" expanded="true" />
+                <element signature="e#6645#6646#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -63,7 +59,7 @@
       <file leaf-file-name="News.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/News.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-34">
+            <state relative-caret-position="-85">
               <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
               <folding />
             </state>
@@ -820,7 +816,7 @@
       <updated>1468426623501</updated>
       <workItem from="1468426629012" duration="181000" />
       <workItem from="1468426832618" duration="436000" />
-      <workItem from="1468427548755" duration="9674000" />
+      <workItem from="1468427548755" duration="10213000" />
     </task>
     <task id="LOCAL-00001" summary="please work dammit">
       <created>1468426898417</created>
@@ -871,11 +867,18 @@
       <option name="project" value="LOCAL" />
       <updated>1468444336145</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="it all fits again">
+      <created>1468444657704</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1468444657704</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10291000" />
+    <option name="totallyTimeSpent" value="10830000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="775" extended-state="0" />
@@ -927,7 +930,8 @@
     <MESSAGE value="josh keeps asking me" />
     <MESSAGE value="news box works" />
     <MESSAGE value="changed new timing" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed new timing" />
+    <MESSAGE value="it all fits again" />
+    <option name="LAST_COMMIT_MESSAGE" value="it all fits again" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -956,12 +960,12 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1196#1197#0" expanded="true" />
             <element signature="e#1228#1229#0" expanded="true" />
-            <element signature="e#6430#6431#0" expanded="true" />
-            <element signature="e#6463#6464#0" expanded="true" />
-            <element signature="e#6496#6497#0" expanded="true" />
-            <element signature="e#6525#6526#0" expanded="true" />
-            <element signature="e#6561#6562#0" expanded="true" />
-            <element signature="e#6589#6590#0" expanded="true" />
+            <element signature="e#6486#6487#0" expanded="true" />
+            <element signature="e#6519#6520#0" expanded="true" />
+            <element signature="e#6552#6553#0" expanded="true" />
+            <element signature="e#6581#6582#0" expanded="true" />
+            <element signature="e#6617#6618#0" expanded="true" />
+            <element signature="e#6645#6646#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1017,12 +1021,12 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1196#1197#0" expanded="true" />
             <element signature="e#1228#1229#0" expanded="true" />
-            <element signature="e#6430#6431#0" expanded="true" />
-            <element signature="e#6463#6464#0" expanded="true" />
-            <element signature="e#6496#6497#0" expanded="true" />
-            <element signature="e#6525#6526#0" expanded="true" />
-            <element signature="e#6561#6562#0" expanded="true" />
-            <element signature="e#6589#6590#0" expanded="true" />
+            <element signature="e#6486#6487#0" expanded="true" />
+            <element signature="e#6519#6520#0" expanded="true" />
+            <element signature="e#6552#6553#0" expanded="true" />
+            <element signature="e#6581#6582#0" expanded="true" />
+            <element signature="e#6617#6618#0" expanded="true" />
+            <element signature="e#6645#6646#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1144,14 +1148,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/News.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/NewsLoop.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1160,20 +1156,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/News.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="120" column="30" selection-start-line="120" selection-start-column="30" selection-end-line="120" selection-end-column="30" />
+        <state relative-caret-position="196">
+          <caret line="125" column="40" selection-start-line="125" selection-start-column="40" selection-end-line="125" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1196#1197#0" expanded="true" />
             <element signature="e#1228#1229#0" expanded="true" />
-            <element signature="e#6430#6431#0" expanded="true" />
-            <element signature="e#6463#6464#0" expanded="true" />
-            <element signature="e#6496#6497#0" expanded="true" />
-            <element signature="e#6525#6526#0" expanded="true" />
-            <element signature="e#6561#6562#0" expanded="true" />
-            <element signature="e#6589#6590#0" expanded="true" />
+            <element signature="e#6486#6487#0" expanded="true" />
+            <element signature="e#6519#6520#0" expanded="true" />
+            <element signature="e#6552#6553#0" expanded="true" />
+            <element signature="e#6581#6582#0" expanded="true" />
+            <element signature="e#6617#6618#0" expanded="true" />
+            <element signature="e#6645#6646#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -123,6 +123,8 @@ public class Game extends GraphicsProgram implements Runnable{
         NewsLoop newsLoop = new NewsLoop(theNews, newsStory, this);
         new Thread(newsLoop).start();
 
+        add(new GLabel("In Today's News:", 370, 125));
+
         addActionListeners();
         addKeyListeners();
 
