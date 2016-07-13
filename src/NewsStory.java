@@ -45,7 +45,7 @@ public class NewsStory
         company[13]="IBM";
         company[14]="Intel ";
         company[15]="McDonald's";
-        company[16]="Johnson & Johnson";
+        company[16]="J&J";
         company[17]="JPMorgan Chase";
         company[18]="Disney";
         company[19]="Wal-Mart";
@@ -62,10 +62,10 @@ public class NewsStory
 
         effect[0]="committed armed robbery.";
         effect[1]="committed first degree murder.";
-        effect[2]="been accused of the kidnap and torture of Santa Claus.";
+        effect[2]="been accused of the kidnap of Santa Claus.";
         effect[3]="released a new hit single.";
-        effect[4]="been caught stealing recources in Settlers of Catan.";
-        effect[5]="downloaded free RAM from a website connected to 4Chan.";
+        effect[4]="been stealing recources in Settlers of Catan.";
+        effect[5]="downloaded free RAM from 4Chan.";
         effect[6]="joined the church of Scientology.";
         effect[7]="begun research into cookie production.";
         effect[8]="died in a tragic golfing accident.";
