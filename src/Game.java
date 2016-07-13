@@ -22,7 +22,7 @@ public class Game extends GraphicsProgram implements Runnable{
     User user;
     ArrayList<GLabel> stockLabels;
     NormalDistribution distMarket;
-    public int speed=20000;
+    public int speed=5000;
     private JLabel speedLabel;
     static private int[] code =
             {38, 38, 40, 40, 37, 39, 37, 39, 66, 65};
@@ -115,7 +115,7 @@ public class Game extends GraphicsProgram implements Runnable{
         add(new JButton("Ludicrous Speed"), NORTH);
 
         add(new JLabel("  Current Speed: "), NORTH);
-        speedLabel = new JLabel("U.S. Postal Service");
+        speedLabel = new JLabel("Light Speed");
         add(speedLabel, NORTH);
 
         addActionListeners();
