@@ -67,7 +67,7 @@ public class NewsStory
         effect[4]="been stealing recources in Settlers of Catan.";
         effect[5]="downloaded free RAM from 4Chan.";
         effect[6]="joined the church of Scientology.";
-        effect[7]="begun research into cookie production.";
+        effect[7]="was run over by Pokemon go adicts.";
         effect[8]="died in a tragic golfing accident.";
         effect[9]="gone missing in Kazakhstan.";
     }
