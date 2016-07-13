@@ -1,5 +1,4 @@
 import acm.graphics.*;
-import acm.gui.TableLayout;
 import acm.program.GraphicsProgram;
 import org.apache.commons.math3.distribution.NormalDistribution;
 import javax.swing.*;
@@ -13,7 +12,7 @@ import static javax.swing.JOptionPane.YES_OPTION;
 
 /**
  * Created by Adam on 7/8/2016. 
- * This is the main meathod being run, which manages all other classes. 
+ * This is the main method being run, which manages all other classes.
  */
 public class Game extends GraphicsProgram implements Runnable{ 
     public static Stock[] TheStocks;
