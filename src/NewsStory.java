@@ -41,6 +41,7 @@ public class NewsStory
         company[8]="Cisco ";
         company[9]="Chevron";
         company[10]="Coca-Cola";
+        company[11]="Wal-Mart";
         company[12]="3M Company ";
         company[13]="IBM";
         company[14]="Intel ";
