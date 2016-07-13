@@ -180,7 +180,7 @@ public class Game extends GraphicsProgram implements Runnable{
                         null,
                         "Place Order For: \n" + qualifiedQuantity + " of: " + symbolEntered.getText() + "?"
                         + "\n This will cost:  $" + new DecimalFormat("#.##").format(getStockMatch(symbolEntered.getText()).getPrice()*qualifiedQuantity)
-                        +" \n and will bring you cash down to: $" + new DecimalFormat("#.##").format(((int)(user.getMyCash())-getStockMatch(symbolEntered.getText()).getPrice()*qualifiedQuantity)),
+                        +" \n and will bring you cash to: $" + new DecimalFormat("#.##").format(((int)(user.getMyCash())-getStockMatch(symbolEntered.getText()).getPrice()*qualifiedQuantity)),
                         "Order Confirmation",
                         JOptionPane.YES_NO_OPTION);
                 if (n==YES_OPTION){
