@@ -19,7 +19,6 @@ public class Game extends GraphicsProgram implements Runnable{
     JTextField symbolEntered = new JTextField(9);
     JTextField quantityEntered = new JTextField(9);
     User user;
-    ArrayList<GLabel> stockLabels;
     NormalDistribution distMarket;
     public int speed=5000;
     private JLabel speedLabel;
