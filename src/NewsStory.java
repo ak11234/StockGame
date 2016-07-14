@@ -17,15 +17,15 @@ public class NewsStory
     {
         position = new String[10];
         company = new String[30];
-        effect = new String[10];
+        effect = new String[13];
 
-        position[0]="Communications Department";
+        position[0]="Junior President";
         position[1]="CEO";
         position[2]="CFO";
         position[3]="HR Department";
         position[4]="Research Department";
         position[5]="Sales Manager";
-        position[6]="Chief Sales Advisor";
+        position[6]="Sail Sales Advisor";
         position[7]="President";
         position[8]="Board of Directors";
         position[9]="Vice President";
@@ -41,6 +41,7 @@ public class NewsStory
         company[8]="Cisco ";
         company[9]="Chevron";
         company[10]="Coca-Cola";
+        company[11]="Wal-Mart";
         company[12]="3M Company ";
         company[13]="IBM";
         company[14]="Intel ";
@@ -64,17 +65,20 @@ public class NewsStory
         effect[1]="committed first degree murder.";
         effect[2]="been accused of the kidnap of Santa Claus.";
         effect[3]="released a new hit single.";
-        effect[4]="been stealing recources in Settlers of Catan.";
+        effect[4]="stolen recources in Settlers of Catan.";
         effect[5]="downloaded free RAM from 4Chan.";
         effect[6]="joined the church of Scientology.";
-        effect[7]="was run over by Pokemon Go! adicts.";
+        effect[7]="was run over by a heard of Pokemon Go! adicts.";
         effect[8]="died in a tragic golfing accident.";
         effect[9]="gone missing in Kazakhstan.";
+        effect[10]="failed to submit a tax statement.";
+        effect[11]="is under investigation by the FBI.";
+        effect[12]="been sued for illegal experiments on employees.";
     }
 
     public String newNewsStory()
     {
         return "The "+position[(int)(Math.random()*10)]+" of "+company[(int)(Math.random()*30)]+
-               " has "+effect[(int)(Math.random()*10)];
+               " has "+effect[(int)(Math.random()*14)];
     }
 }
