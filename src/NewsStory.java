@@ -79,6 +79,6 @@ public class NewsStory
     public String newNewsStory()
     {
         return "The "+position[(int)(Math.random()*10)]+" of "+company[(int)(Math.random()*30)]+
-               " has "+effect[(int)(Math.random()*14)];
+               " has "+effect[(int)(Math.random()*13)];
     }
 }
