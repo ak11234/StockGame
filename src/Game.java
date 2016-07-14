@@ -129,7 +129,6 @@ public class Game extends GraphicsProgram implements Runnable{
         addKeyListeners();
 
         User user = new User(this);
-        System.out.println(user.getMyHoldings());
         int x=0;
         distMarket= new NormalDistribution(0.11/230, 0.2/(Math.sqrt(230)));
 
@@ -159,9 +158,6 @@ public class Game extends GraphicsProgram implements Runnable{
     public void actionPerformed(ActionEvent e){
         String key;
         key = e.getActionCommand();
-        System.out.println(key);
-        System.out.println(symbolEntered.getText());
-        System.out.println(quantityEntered.getText());
 
         if (key.equals("Buy") || key.equals("Sell")){ //If we are buying/selling
             boolean validSymbol = false;
@@ -257,8 +253,6 @@ public class Game extends GraphicsProgram implements Runnable{
     }
 
     public void keyPressed(KeyEvent e){
-        System.out.println(e);
-        System.out.println(e.getKeyCode());
         if (e.getKeyCode()==10) {
             boolean start=true;
             for (int key : code){
