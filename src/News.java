@@ -30,7 +30,7 @@ public class News {
 
     public void add(String text){
         for (int k = myAmt-1 ; k>0 ; k--){
-            GLabel temp1 =myLabels.get(k);
+            GLabel temp1 = myLabels.get(k);
             GLabel temp2 = myLabels.get(k-1);
             temp1.setLabel(temp2.getLabel());
         }
