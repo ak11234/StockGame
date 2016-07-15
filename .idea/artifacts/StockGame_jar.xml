@@ -5,6 +5,7 @@
       <element id="module-output" name="StockGame" />
       <element id="extracted-dir" path="$PROJECT_DIR$/commons-math3-3.6.1.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/acm.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../EasyVisuals/out/artifacts/EasyVisuals_jar/EasyVisuals.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
