@@ -76,7 +76,7 @@ public class Game extends GraphicsProgram implements Runnable{
         TheStocks[19]= new Stock ("Merck", "MRK", 59.23, 3, 3, this, 20); //Merck
         TheStocks[20]= new Stock ("Microsoft", "MSFT", 52.23, 1.6, 1.6, this, 21);//Microsoft
         TheStocks[21]= new Stock ("Nike", "NKE", 56.61, 2.3, 2.3, this, 22); //Nike
-        TheStocks[22]= new Stock ("Phizer", "PFE", 35.99, 2.1, 2.1, this, 23); //Phizer
+        TheStocks[22]= new Stock ("Pfizer", "PFE", 35.99, 2.1, 2.1, this, 23); //Phizer
         TheStocks[23]= new Stock ("Procter & Gamble", "PG", 85.72, .6, .6, this, 24);  //Procter & Gamble
         TheStocks[24]= new Stock ("Travelers Companies Inc", "TRV", 117.90, 1, 1, this, 25);//Travelers Companies Inc
         TheStocks[25]= new Stock ("United Technologies", "UTX", 103.38, 3, 3, this, 26);//United Technologies
