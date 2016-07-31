@@ -261,7 +261,7 @@ public class Game extends GraphicsProgram implements Runnable{
             }
             if (start) {
                 colorChange=true;
-                new EasyVisuals().quickStart();
+                //new EasyVisuals().quickStart();
 
             }
         } else {
